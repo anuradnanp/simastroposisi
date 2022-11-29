@@ -24,85 +24,6 @@ You should have received a copy of the GNU General Public License along with Sim
 <!-- Main css -->
 <link rel="stylesheet" href="css/style-umum.css">
 
-<style>
-	#HCB_comment_box #hcb_form_content,
-	#HCB_comment_box #hcb_form_email,
-	#HCB_comment_box #hcb_form_name,
-	#HCB_comment_box #hcb_form_website {
-		font-family: Montserrat;
-	}
-
-	blockquote {
-		padding: 5px 8px;
-	}
-
-	blockquote::before {
-		content: none;
-	}
-
-	#HCB_comment_box h3 {
-		display: none;
-	}
-
-	#HCB_comment_box input,
-	#HCB_comment_box textarea {
-		border-color: #999 !important;
-		transition: none !important;
-		border-radius: 5px !important;
-		box-shadow: none !important;
-		color: black !important;
-	}
-
-	#HCB_comment_box label {
-		color: #000 !important;
-	}
-
-	#HCB_comment_box .comment .likes {
-		top: 5px !important;
-		right: 5px !important;
-		display: none;
-	}
-
-	#HCB_comment_box .comment .likes img{
-		display: none;
-	}
-
-	#HCB_comment_box .comment .likes:after{
-		content: ' \1F44D';
-	}
-
-	.wcustomhtml {
-		text-align: left;
-	}
-
-	.home-desc {
-		display: none;
-	}
-
-	.admin-link {
-		display: none !important;
-	}
-
-	.submit, .btn-secondary {
-  border: 1px solid black !important;
-  background-color: black !important;
-  border-radius: 5px !important;
-  padding: 5px 10px !important;
-  color: white !important;
-	text-align: left !important;
-	font-family: montserrat !important;
-	font-size: 14px !important;
-	letter-spacing: 0.2px !important;
-	line-height: 20px !important;
-	}
-
-	.submit, .btn-secondary:hover {
-		border-color: black !important;
-		background-color: white !important;
-		color: black !important;
-	}
-</style>
-
 </head>
 <body>
 
@@ -125,74 +46,25 @@ You should have received a copy of the GNU General Public License along with Sim
 
 			<div class="col-md-offset-1 col-md-10 col-sm-12">
 				<div class="col-md-4 col-sm-12">
+					<div id="disqus_thread"></div>
 					<script>
-					/* This code goes ABOVE the main HTML Comment Box code!
-					replace the text in the single quotes below to customize labels.*/
-						hcb_user = {
-							/* L10N */
-							comments_header : 'Komentar',
-							name_label : 'Nama',
-							content_label: 'Tulis komentar di sini',
-							submit : 'Kirim Komentar',
-							logout_link : '<img title="log out" src="https://www.htmlcommentbox.com/static/images/door_out.svg" alt="[logout]" class="hcb-icon hcb-door-out"/>',
-							admin_link : '<img src="https://www.htmlcommentbox.com/static/images/door_in.svg" alt="[login]" class="hcb-icon hcb-door-in"/>',
-							no_comments_msg: 'Belum ada yang berkomentar. Silakan mulai!',
-							add:'Tambahkan komentar',
-							again: 'Berkomentar lagi',
-							rss:'<img src="https://www.htmlcommentbox.com/static/images/feed.svg" class="hcb-icon" alt="rss"/> ',
-							said:'menulis:',
-							prev_page:'<img src="https://www.htmlcommentbox.com/static/images/arrow_left.png" class="hcb-icon" title="previous page" alt="[prev]"/>',
-							next_page:'<img src="https://www.htmlcommentbox.com/static/images/arrow_right.png" class="hcb-icon" title="next page" alt="[next]"/>',
-							showing:'Menampilkan',
-							to:'kepada',
-							website_label:'halaman web (opsional)',
-							email_label:'Email',
-							anonymous:'Anonim',
-							mod_label:'(mod)',
-							subscribe:'Kirimi Email jika Ada Balasan',
-							add_image:'Kirim Gambar',
-							are_you_sure:'Komentar ini tidak pantas?',
+							/**
+							*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+							*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
 
-							reply:'Balas',
-							flag:'Tandai',
-							like:'Suka',
+							var disqus_config = function () {
+							this.page.url = 'https://anuradnanp.github.io/simastroposisi-comm-id/ekuatorial-horizon.html';  // Replace PAGE_URL with your page's canonical URL variable
+							this.page.identifier = 'ekuatorial-horizon'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+							};
 
-							/* dates */
-							days_ago:'hari lalu',
-							hours_ago:'jam lalu',
-							minutes_ago:'menit lalu',
-							within_the_last_minute:'baru saja',
-
-							msg_thankyou:'Terima kasih sudah berkomentar!',
-							msg_approval:'CATATAN: Komentar ini belum disetujui untuk ditampilkan',
-							msg_approval_required:'Terima kasih sudah berkomentar! Komentar Anda akan ditampilkan setelah disetujui oleh moderator.',
-
-							err_bad_html:'Komentar Anda mengandung html yang tidak tepat.',
-							err_bad_email:'Masukkan alamat email yang valid.',
-							err_too_frequent:'Tunggu dulu beberapa detik sebelum mengirimkan komentar baru.',
-							err_comment_empty:'Komentar kosong Anda tidak akan ditampilkan!',
-							err_denied:'Komentar Anda tidak disetujui.',
-							err_unknown:'Komentar Anda diblokir, silakan laporkan.',
-							err_spam:'Komentar Anda terdeteksi sebagai spam.',
-							err_blocked:'Komentar Anda bertentangan dengan kebijakan halaman web.',
-
-							/* SETTINGS */
-							MAX_CHARS: 8192,
-							PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
-							ON_COMMENT: function(){}, /* Function to call after commenting. */
-							RELATIVE_DATES:false /* show dates in the form "X hours ago." etc. */
-						};
+							(function() { // DON'T EDIT BELOW THIS LINE
+							var d = document, s = d.createElement('script');
+							s.src = 'https://ekuatorial-horizon.disqus.com/embed.js';
+							s.setAttribute('data-timestamp', +new Date());
+							(d.head || d.body).appendChild(s);
+							})();
 					</script>
-
-					<div id="HCB_comment_box">
-						<a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...
-					</div>
-
-					<link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
-
-					<script type="text/javascript" id="hcb">
-						/*<!--*/ if(!window.hcb_user){hcb_user={};} hcb_user.PAGE="https://anuradnanp.github.io/simastroposisi-comm-id/ekuatorial-horizon.html";(function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24.lEIRNhLCJ9COLIzEt8B7."+"&opts=21270&num=10&ts=1663604111835");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/
-					</script>
+					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 				</div>
 
 			</div>
@@ -203,6 +75,9 @@ You should have received a copy of the GNU General Public License along with Sim
 </section>
 
 <!-- SCRIPTS -->
+<script>
+	document.getElementsByClassName("hcb-reply").innerHTML = "Balas";
+</script>
 
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
