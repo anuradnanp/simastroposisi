@@ -1368,10 +1368,18 @@
 
 #HCB_comment_box #comments_list {
 	flex: 1;
-	overflow: scroll !important;
+	overflow: visible !important;
 	padding-right: 8px;
+}
+
+#HCB_comment_box .comment .likes img{
+	display: none;
 }
 
 #HCB_comment_box .comment .likes img:after {
 	content: ' \1F44D';
+}
+
+h3 {
+	display: none !important;
 }
