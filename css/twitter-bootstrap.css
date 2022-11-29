@@ -1335,7 +1335,7 @@
 	font-size: 14px !important;
 	padding: 10px 16px !important;
 	margin-right: 6px !important;
-	font-weight: 500 !important;
+	font-weight: 400 !important;
 }
 
 #HCB_comment_box #hcb_form .btn:hover,
@@ -1343,4 +1343,25 @@
 	border: 1px solid black !important;
 	background-color: white !important;
 	color: black !important;
+}
+
+#HCB_comment_box .hcb-comment-tb button {
+	font-size: 14px !important;
+	color: #6CA2FD !important;
+	text-decoration: none;
+	font-weight: 400 !important;
+	border: none;
+	padding: 0;
+	margin-right: 4px;
+	background: none;
+	cursor: pointer;
+}
+
+#HCB_comment_box .hcb-comment-tb button:hover {
+	color: #d79922 !important;
+}
+
+#HCB_comment_box #hcb_form .home-desc,
+#hcb_subscribe {
+	display: none !important;
 }
