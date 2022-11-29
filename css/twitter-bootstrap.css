@@ -1320,3 +1320,37 @@
 	color: #d79922;
 	text-decoration: none;
 }
+
+#HCB_comment_box #hcb_form .btn,
+#HCB_comment_box #HCB_comment_form_box .btn {
+	font-family: "montserrat";
+	letter-spacing: 0.2px;
+	border: 1px solid black;
+	outline: 0;
+	background-color: black;
+	color: white;
+	text-decoration: none;
+	text-shadow: none;
+	box-shadow: none;
+	font-size: 14px;
+	padding: 10px 16px;
+	margin-right: 6px;
+	font-weight: 500;
+}
+
+#HCB_comment_box #hcb_form .btn:hover,
+#HCB_comment_box #HCB_comment_form_box .btn:hover {
+	font-family: "montserrat";
+	letter-spacing: 0.2px;
+	border: 1px solid black;
+	outline: 0;
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	text-shadow: none;
+	box-shadow: none;
+	font-size: 14px;
+	padding: 10px 16px;
+	margin-right: 6px;
+	font-weight: 500;
+}
