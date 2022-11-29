@@ -1368,7 +1368,7 @@
 
 #HCB_comment_box #comments_list {
 	flex: 10 !important;
-	overflow: auto !important;
+	overflow: visible !important;
 	padding-right: 8px;
 }
 
@@ -1390,5 +1390,5 @@ h3 {
 
 #HCB_comment_box .hcb-link {
 	cursor: pointer;
-	margin-bottom: 40px !important;
+	margin-bottom: 20px !important;
 }
