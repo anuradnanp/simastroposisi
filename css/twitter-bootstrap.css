@@ -1365,3 +1365,13 @@
 #hcb_subscribe {
 	display: none !important;
 }
+
+#HCB_comment_box #comments_list {
+	flex: 1;
+	overflow: scroll !important;
+	padding-right: 8px;
+}
+
+#HCB_comment_box .comment .likes img:after {
+	content: ' \1F44D';
+}
