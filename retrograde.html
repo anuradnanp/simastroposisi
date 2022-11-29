@@ -8,4 +8,206 @@ SimAstroPosisi is distributed in the hope that it will be useful, but WITHOUT AN
 
 You should have received a copy of the GNU General Public License along with SimAstroPosisi. If not, see <https://www.gnu.org/licenses/>. -->
 
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="description" content=""><meta name="keywords" content=""><meta name="author" content=""><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><title>SimAstroPosisi - Gerak Retrograde Planet</title><link rel="stylesheet" href="css/bootstrap.css"><link rel="stylesheet" href="css/style-umum.css"><link rel="stylesheet" href="css/style-kanvas.css"><link rel="stylesheet" href="css/kuis-style.css"><script src="js/p5.js"></script></head><body><div class="preloader"><div class="sk-spinner sk-spinner-wordpress"><span class="sk-inner-circle"></span></div></div><div class="navbar navbar-default navbar-static-top" role="navigation"><div class="container"><div class="navbar-header"><h2 class="appname">SimAstroPosisi</h2><button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon icon-bar"></span><span class="icon icon-bar"></span><span class="icon icon-bar"></span></button></div><div class="collapse navbar-collapse"><ul class="nav navbar-nav navbar-right"><li><a href="pengantar.html">Pengantar</a></li><li><a href="tanggal-julian.html">Tanggal Julian</a></li><li><a href="ekuatorial-horizon.html">Koordinat Ekuatorial dan Horizon</a></li><li class="active"><a>Gerak Retrograde Planet</a></li><li><a href="fase-bulan-gerhana.html">Fase Bulan dan Gerhana</a></li><li><a href="lisensi-komponen.html">Lisensi dan Komponen</a></li></ul></div></div></div><section id="about"><div class="container"><div class="row"><div class="col-md-offset-1 col-md-10 col-sm-12"><div class="col-md-4 col-sm-12"><h2>3/12 - Kata Kunci</h2><h1>Gerak Retrograde Planet</h1><ul><li><i>retrograde</i></li><li><i>prograde</i></li><li><i>radius orbit</i></li><li><i>periode orbit</i></li><li><i>posisi pandang</i></li><li><i>bintang latar</i></li></ul></div><div class="col-md-4 col-sm-12"><h2>Rangkuman</h2><h1>Gerak Balik Planet dan Penyebabnya</h1><p>Asal kata "planet" yaitu istilah Yunani Kuno "planétes, πλανήτης", yang artinya "pengembara".</p><p>Salah satu yang menjadikan planet disifati sebagai "pengembara" yaitu gerak retrograde, atau gerak berbalik arah terhadap bintang latar, dengan gerak searah bintang latar disebut prograde.</p><p>Gerak retrograde merupakan gerak semu, terjadi karena variasi posisi pengamat di Bumi ketika melihat variasi posisi planet.</p><figure><img src="aset/retrograde-02.jpg" style="margin-left:auto;margin-right:auto" class="img-responsive" alt="Gerak retrograde Mars dari Bumi dan Bumi dari Mars"><figcaption><p>Gerak retrograde Mars pada langit Bumi dan retrograde Bumi pada langit Mars. (<a href="https://mars.nasa.gov/all-about-mars/night-sky/retrograde/" target="_blank">foto dan diagram oleh NASA)</a></p></figcaption></figure></div><div class="col-md-4 col-sm-12"><figure><img src="aset/retrograde-01.gif" style="margin-left:auto;margin-right:auto" class="img-responsive" style="margin-left:auto;margin-right:auto" alt="Gerak retrograde Mars tahun 2003"><figcaption><p>Gerak retrograde Mars pada rasi Aquarius selama paruh akhir tahun 2003. (<a href="https://commons.wikimedia.org/wiki/User:Seav" target="_blank">diagram oleh Eugene Alvin Villar</a>dengan lisensi<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.id" target="_blank">CC BY-SA 4.0</a>)</p></figcaption></figure></div><div class="clearfix"></div></div></div><div class="row"><div class="col-md-offset-1 col-md-10 col-sm-12"><div class="col-md-4 col-sm-12"><h2>Simulasi</h2><h1>Gerak Semu Planet</h1><p>Yang biasa diperagakan yaitu gerak planet terhadap Matahari, jarang ditunjukkan bagaimana kesan gerak planet bagi planet lainnya.</p><p>Pada model berikut untuk melihat kesan gerak planet bagi Bumi, jadikan Bumi sebagai pusat pandangan.</p><p>Titik kuning menandai Matahari, biru Bumi, dan merah planet yang dilihat dari Bumi.</p><div id="SimRetrograde" style="width:320px;margin:20px auto 30px auto;position:relative"></div></div><div class="col-md-4 col-sm-12"><h2>Latihan</h2><h1>Uji Pemahaman</h1><p>Semua soal berikut dapat diselesaikan dengan bantuan simulasi atau kalkulator di topik ini.</p><div class="container-soal"><div id="question-container" class="hide"><div id="question">Pertanyaan</div><div id="answer-buttons" class="btn-grid-soal"><button class="btn-soal">Jawaban 1</button><button class="btn-soal">Jawaban 2</button><button class="btn-soal">Jawaban 3</button><button class="btn-soal">Jawaban 4</button></div></div><div class="controls"><button id="start-btn" class="start-btn btn-soal">Mulai latihan</button><button id="next-btn" class="next-btn btn-soal hide">Lanjut</button></div></div></div><div class="col-md-4 col-sm-12"><h2>Kalkulator</h2><h1>Posisi Planet</h1><p>Planet dalam yaitu planet yang orbitnya lebih kecil dari orbit Bumi sehingga hanya bisa diamati saat fajar atau senja pada tanggal-tanggal tertentu.</p><p>Pada model berikut, titik kuning menandai Matahari, biru Bumi, dan sisanya Merkurius, Venus, Mars, Jupiter, dan Saturnus, sesuai urutannya menjauh dari Matahari.</p><p>Bidang biru melingkupi tampakan malam hari bagi pengamat di Bumi.</p><div id="CalcPosPlanet" style="width:320px;margin:20px auto 30px auto;position:relative"></div></div><div class="clearfix"></div></div></div></div></section><script src="js/jquery.js"></script><script src="js/bootstrap.js"></script><script src="js/custom.js"></script><script src="sims/SimRetrograde.js"></script><script src="calcs/CalcPosPlanet.js"></script><script>var fetch=null</script><script src="js/fetch.js"></script><script src="soal/retrograde.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="css/bootstrap.css">
+
+<!-- Main css -->
+<link rel="stylesheet" href="css/style-umum.css">
+<link rel="stylesheet" href="css/kuis-style.css">
+
+<style>
+	#HCB_comment_box #hcb_form_content,
+	#HCB_comment_box #hcb_form_email,
+	#HCB_comment_box #hcb_form_name,
+	#HCB_comment_box #hcb_form_website {
+		font-family: Montserrat;
+	}
+
+	blockquote {
+		padding: 5px 8px;
+	}
+
+	blockquote::before {
+		content: none;
+	}
+
+	#HCB_comment_box h3 {
+		display: none;
+	}
+
+	#HCB_comment_box input,
+	#HCB_comment_box textarea {
+		border-color: #999 !important;
+		transition: none !important;
+		border-radius: 5px !important;
+		box-shadow: none !important;
+		color: black !important;
+	}
+
+	#HCB_comment_box label {
+		color: #000 !important;
+	}
+
+	#HCB_comment_box .comment .likes {
+		top: 5px !important;
+		right: 5px !important;
+		display: none;
+	}
+
+	#HCB_comment_box .comment .likes img{
+		display: none;
+	}
+
+	#HCB_comment_box .comment .likes:after{
+		content: ' \1F44D';
+	}
+
+	.wcustomhtml {
+		text-align: left;
+	}
+
+	.home-desc {
+		display: none;
+	}
+
+	.admin-link {
+		display: none !important;
+	}
+
+	.submit, .btn-secondary {
+  border: 1px solid black !important;
+  background-color: black !important;
+  border-radius: 5px !important;
+  padding: 5px 10px !important;
+  color: white !important;
+	text-align: left !important;
+	font-family: montserrat !important;
+	font-size: 14px !important;
+	letter-spacing: 0.2px !important;
+	line-height: 20px !important;
+	}
+
+	.submit, .btn-secondary:hover {
+		border-color: black !important;
+		background-color: white !important;
+		color: black !important;
+	}
+</style>
+
+</head>
+<body>
+
+<!-- PRE LOADER -->
+
+<div class="preloader">
+	<div class="sk-spinner sk-spinner-wordpress">
+		<span class="sk-inner-circle"></span>
+	</div>
+</div>
+
+<!-- About Section -->
+
+<section id="about">
+	<div class="container">
+
+<!-- Row 1 -->
+
+		<div class="row">
+
+			<div class="col-md-offset-1 col-md-10 col-sm-12">
+				<div class="col-md-4 col-sm-12">
+					<script>
+					/* This code goes ABOVE the main HTML Comment Box code!
+					replace the text in the single quotes below to customize labels.*/
+						hcb_user = {
+							/* L10N */
+							comments_header : 'Komentar',
+							name_label : 'Nama',
+							content_label: 'Tulis komentar di sini',
+							submit : 'Kirim Komentar',
+							logout_link : '<img title="log out" src="https://www.htmlcommentbox.com/static/images/door_out.svg" alt="[logout]" class="hcb-icon hcb-door-out"/>',
+							admin_link : '<img src="https://www.htmlcommentbox.com/static/images/door_in.svg" alt="[login]" class="hcb-icon hcb-door-in"/>',
+							no_comments_msg: 'Belum ada yang berkomentar. Silakan mulai!',
+							add:'Tambahkan komentar',
+							again: 'Berkomentar lagi',
+							rss:'<img src="https://www.htmlcommentbox.com/static/images/feed.svg" class="hcb-icon" alt="rss"/> ',
+							said:'menulis:',
+							prev_page:'<img src="https://www.htmlcommentbox.com/static/images/arrow_left.png" class="hcb-icon" title="previous page" alt="[prev]"/>',
+							next_page:'<img src="https://www.htmlcommentbox.com/static/images/arrow_right.png" class="hcb-icon" title="next page" alt="[next]"/>',
+							showing:'Menampilkan',
+							to:'kepada',
+							website_label:'halaman web (opsional)',
+							email_label:'Email',
+							anonymous:'Anonim',
+							mod_label:'(mod)',
+							subscribe:'Kirimi Email jika Ada Balasan',
+							add_image:'Kirim Gambar',
+							are_you_sure:'Komentar ini tidak pantas?',
+
+							reply:'Balas',
+							flag:'Tandai',
+							like:'Suka',
+
+							/* dates */
+							days_ago:'hari lalu',
+							hours_ago:'jam lalu',
+							minutes_ago:'menit lalu',
+							within_the_last_minute:'baru saja',
+
+							msg_thankyou:'Terima kasih sudah berkomentar!',
+							msg_approval:'CATATAN: Komentar ini belum disetujui untuk ditampilkan',
+							msg_approval_required:'Terima kasih sudah berkomentar! Komentar Anda akan ditampilkan setelah disetujui oleh moderator.',
+
+							err_bad_html:'Komentar Anda mengandung html yang tidak tepat.',
+							err_bad_email:'Masukkan alamat email yang valid.',
+							err_too_frequent:'Tunggu dulu beberapa detik sebelum mengirimkan komentar baru.',
+							err_comment_empty:'Komentar kosong Anda tidak akan ditampilkan!',
+							err_denied:'Komentar Anda tidak disetujui.',
+							err_unknown:'Komentar Anda diblokir, silakan laporkan.',
+							err_spam:'Komentar Anda terdeteksi sebagai spam.',
+							err_blocked:'Komentar Anda bertentangan dengan kebijakan halaman web.',
+
+							/* SETTINGS */
+							MAX_CHARS: 8192,
+							PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
+							ON_COMMENT: function(){}, /* Function to call after commenting. */
+							RELATIVE_DATES:false /* show dates in the form "X hours ago." etc. */
+						};
+					</script>
+
+					<div id="HCB_comment_box">
+						<a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...
+					</div>
+
+					<link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+
+					<script type="text/javascript" id="hcb">
+						/*<!--*/ if(!window.hcb_user){hcb_user={};} hcb_user.PAGE="https://anuradnanp.github.io/simastroposisi-comm-id/retrograde.html";(function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24.lEIRNhLCJ9COLIzEt8B7."+"&opts=21270&num=10&ts=1663604111835");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/
+					</script>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+</section>
+
+<!-- SCRIPTS -->
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
