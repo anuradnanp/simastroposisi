@@ -1367,8 +1367,8 @@
 }
 
 #HCB_comment_box #comments_list {
-	flex: 1;
-	overflow: visible !important;
+	flex: 10 !important;
+	overflow: auto !important;
 	padding-right: 8px;
 }
 
@@ -1377,7 +1377,7 @@
 }
 
 #HCB_comment_box .comment .likes img:after {
-	content: ' \1F44D';
+	content: ' \1F44D' !important;
 }
 
 h3 {
