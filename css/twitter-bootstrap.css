@@ -1372,11 +1372,18 @@
 	padding-right: 8px;
 }
 
+#HCB_comment_box .comment .likes {
+	top: 5px !important;
+	right: 5px !important;
+}
+
 #HCB_comment_box .comment .likes img{
 	display: none;
 }
 
-#HCB_comment_box .comment .likes img:after {
+#HCB_comment_box .comment .likes::after {
+	position: relative;
+	top: -2px;
 	content: ' \1F44D' !important;
 }
 
@@ -1390,5 +1397,5 @@ h3 {
 
 #HCB_comment_box .hcb-link {
 	cursor: pointer;
-	margin-bottom: 20px !important;
+	margin-bottom: 40px !important;
 }
