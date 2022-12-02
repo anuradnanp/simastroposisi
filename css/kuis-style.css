@@ -10,6 +10,7 @@ You should have received a copy of the GNU General Public License along with Sim
 
 .container-soal {
   width: 95%;
+	max-width: 400px;
 	margin: 20px auto 30px auto;
   background-color: white;
 	border: 1px solid black;
