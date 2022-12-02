@@ -14,11 +14,14 @@ let MercVsSphere = function(p) {
 
 		// the fonts
 		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
+// 		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
 // 		LatoReg = p.loadFont('file:///android_asset/aset/Lato-Regular.ttf');
 
 		// the texture materials, providing surfaces and night shade
 		worldWrap = p.loadImage('../aset/world-wrap.png');
 		worldWrapTri = p.loadImage('../aset/world-wrap-triple.png');
+// 		worldWrap = p.loadImage('https://anuradnanp.github.io/astroposisi/aset/world-wrap.png');
+// 		worldWrapTri = p.loadImage('https://anuradnanp.github.io/astroposisi/aset/world-wrap-triple.png');
 // 		worldWrap = p.loadImage('file:///android_asset/aset/world-wrap.png');
 // 		worldWrapTri = p.loadImage('file:///android_asset/aset/world-wrap-triple.png');
 	};

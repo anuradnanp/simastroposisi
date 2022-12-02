@@ -26,6 +26,8 @@ let Retrograde = function(p) {
 	p.preload = function() {
 		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
 		LatoBold = p.loadFont('../aset/Lato-Bold.ttf');
+// 		LatoReg = p.loadFont('https://anuradnanp.github.io/astroposisi/aset/Lato-Regular.ttf');
+// 		LatoBold = p.loadFont('https://anuradnanp.github.io/astroposisi/aset/Lato-Bold.ttf');
 // 		LatoReg = p.loadFont('file:///android_asset/aset/Lato-Regular.ttf');
 // 		LatoBold = p.loadFont('file:///android_asset/aset/Lato-Bold.ttf'); 
 	};

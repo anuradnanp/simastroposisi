@@ -26,12 +26,16 @@ let DailyPath = function(p) {
 		// the sceneries, generic and polar ones
 		img1 = p.loadImage('../aset/web-celestial-coords-landscape.png');
 		img2 = p.loadImage('../aset/web-celestial-coords-landscape-kutub.png');
+// 		img1 = p.loadImage('https://anuradnanp.github.io/astroposisi/aset/web-celestial-coords-landscape.png');
+// 		img2 = p.loadImage('https://anuradnanp.github.io/astroposisi/aset/web-celestial-coords-landscape-kutub.png');
 // 		img1 = p.loadImage('file:///android_asset/aset/web-celestial-coords-landscape.png');
-// 		img2 = p.loadImage('file:///android_asset/aset/web-celestial-coords-landscape-kutub.png'); 
+// 		img2 = p.loadImage('file:///android_asset/aset/web-celestial-coords-landscape-kutub.png');
 
 		// the fonts
 		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
 		LatoBold = p.loadFont('../aset/Lato-Bold.ttf');
+// 		LatoReg = p.loadFont('https://anuradnanp.github.io/astroposisi/aset/Lato-Regular.ttf');
+// 		LatoBold = p.loadFont('https://anuradnanp.github.io/astroposisi/aset/Lato-Bold.ttf');
 // 		LatoReg = p.loadFont('file:///android_asset/aset/Lato-Regular.ttf');
 // 		LatoBold = p.loadFont('file:///android_asset/aset/Lato-Bold.ttf'); 
 	};
