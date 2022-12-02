@@ -74,6 +74,11 @@ let Horizon = function(p) {
 		img2 = p.loadImage('../aset/web-celestial-coords-landscape-side.png');
 		shade = p.loadImage('../aset/web-celestial-coords-obj-shadow.png');
 		latar = p.loadImage('../aset/latar.png');
+// 		img1a = p.loadImage('https://anuradnanp.github.iosimastroposisi/aset/web-celestial-coords-landscape-top-down.png');
+// 		img1b = p.loadImage('https://anuradnanp.github.iosimastroposisi/aset/web-celestial-coords-landscape-top-down-kutub.png');
+// 		img2 = p.loadImage('https://anuradnanp.github.iosimastroposisi/aset/web-celestial-coords-landscape-side.png');
+// 		shade = p.loadImage('https://anuradnanp.github.iosimastroposisi/aset/web-celestial-coords-obj-shadow.png');
+// 		latar = p.loadImage('https://anuradnanp.github.iosimastroposisi/aset/latar.png');
 // 		img1a = p.loadImage('file:///android_asset/aset/web-celestial-coords-landscape-top-down.png');
 // 		img1b = p.loadImage('file:///android_asset/aset/web-celestial-coords-landscape-top-down-kutub.png');
 // 		img2 = p.loadImage('file:///android_asset/aset/web-celestial-coords-landscape-side.png');
@@ -83,6 +88,8 @@ let Horizon = function(p) {
 		// the fonts
 		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
 		LatoBold = p.loadFont('../aset/Lato-Bold.ttf');
+// 		LatoReg = p.loadFont('https://anuradnanp.github.iosimastroposisi/aset/Lato-Regular.ttf');
+// 		LatoBold = p.loadFont('https://anuradnanp.github.iosimastroposisi/aset/Lato-Bold.ttf');
 // 		LatoReg = p.loadFont('file:///android_asset/aset/Lato-Regular.ttf');
 // 		LatoBold = p.loadFont('file:///android_asset/aset/Lato-Bold.ttf');
 	};
