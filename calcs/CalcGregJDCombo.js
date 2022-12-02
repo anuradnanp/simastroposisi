@@ -40,7 +40,7 @@ let GregJDCombo = function(p) {
 
 		// input for gregorian year
 		tahun1st = p.createInput('2021');
-		tahun1st.position(70, 45);
+		tahun1st.position(70, 45).addClass('leaveAlone');
 		tahun1st.size(100, 1.5 * elHeight);
 		tahun1st.style('font-family', 'Lato-Regular');
 		tahun1st.style('font-size', '14px');
@@ -71,7 +71,7 @@ let GregJDCombo = function(p) {
 		detik1st.size(150, elHeight);
 
 		// input for julian date
-		jdInput = p.createInput('2459396.50694');
+		jdInput = p.createInput('2459396.50694').addClass('leaveAlone');
 		jdInput.position(110, 10 * elHeight + 11 * pad + 35 + 20);
 		jdInput.size(150, 1.5 * elHeight);
 		jdInput.style('font-family', 'Lato-Regular');

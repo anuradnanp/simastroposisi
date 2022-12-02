@@ -34,8 +34,8 @@ let Eclipse = function(p) {
 		// the font
 // 		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
 // 		LatoBold = p.loadFont('../aset/Lato-Bold.ttf');
-		LatoReg = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Regular.ttf');
-		LatoBold = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Bold.ttf');
+		LatoReg = p.loadFont('https://anuradnanp.github.iosimastroposisi/aset/Lato-Regular.ttf');
+		LatoBold = p.loadFont('https://anuradnanp.github.iosimastroposisi/aset/Lato-Bold.ttf');
 // 		LatoReg = p.loadFont('file:///android_asset/aset/Lato-Regular.ttf');
 // 		LatoReg = p.loadFont('file:///android_asset/aset/Lato-Bold.ttf');
 
@@ -60,89 +60,89 @@ let Eclipse = function(p) {
 
 		// the time increment buttons
 		minus1mnt = p.createButton('- 1 menit');
-		minus1mnt.position(pad, pad);
+		minus1mnt.position(pad, pad).addClass('leaveAlone');
 		minus1mnt.mousePressed(p.min1menit);
 		minus1mnt.style('font-family', 'Lato-Regular');
 		minus1mnt.style('font-size', '14px');
 		plus1mnt = p.createButton('+ 1 menit');
-		plus1mnt.position(pad, 3 * pad + elHeight);
+		plus1mnt.position(pad, 3 * pad + elHeight).addClass('leaveAlone');
 		plus1mnt.mousePressed(p.plu1menit);
 		plus1mnt.style('font-family', 'Lato-Regular');
 		plus1mnt.style('font-size', '14px');
 
 		minus10mnt = p.createButton('- 10 menit');
-		minus10mnt.position(2 * pad + 65, pad);
+		minus10mnt.position(2 * pad + 65, pad).addClass('leaveAlone');
 		minus10mnt.mousePressed(p.min10menit);
 		minus10mnt.style('font-family', 'Lato-Regular');
 		minus10mnt.style('font-size', '14px');
 		plus10mnt = p.createButton('+ 10 menit');
-		plus10mnt.position(2 * pad + 65, 3 * pad + elHeight);
+		plus10mnt.position(2 * pad + 65, 3 * pad + elHeight).addClass('leaveAlone');
 		plus10mnt.mousePressed(p.plu10menit);
 		plus10mnt.style('font-family', 'Lato-Regular');
 		plus10mnt.style('font-size', '14px');
 
 		minus1j = p.createButton('- 1 jam');
-		minus1j.position(3 * pad + 137, pad);
+		minus1j.position(3 * pad + 137, pad).addClass('leaveAlone');
 		minus1j.mousePressed(p.min1jam);
 		minus1j.style('font-family', 'Lato-Regular');
 		minus1j.style('font-size', '14px');
 		plus1j = p.createButton('+ 1 jam');
-		plus1j.position(3 * pad + 137, 3 * pad + elHeight);
+		plus1j.position(3 * pad + 137, 3 * pad + elHeight).addClass('leaveAlone');
 		plus1j.mousePressed(p.plu1jam);
 		plus1j.style('font-family', 'Lato-Regular');
 		plus1j.style('font-size', '14px');
 
 		minus6j = p.createButton('- 6 jam');
-		minus6j.position(4 * pad + 188, pad);
+		minus6j.position(4 * pad + 188, pad).addClass('leaveAlone');
 		minus6j.mousePressed(p.min6jam);
 		minus6j.style('font-family', 'Lato-Regular');
 		minus6j.style('font-size', '14px');
 		plus6j = p.createButton('+ 6 jam');
-		plus6j.position(4 * pad + 188, 3 * pad + elHeight);
+		plus6j.position(4 * pad + 188, 3 * pad + elHeight).addClass('leaveAlone');
 		plus6j.mousePressed(p.plu6jam);
 		plus6j.style('font-family', 'Lato-Regular');
 		plus6j.style('font-size', '14px');
 
 		minus1h = p.createButton('- 1 hari');
-		minus1h.position(pad, 5 * pad + 2 * elHeight);
+		minus1h.position(pad, 5 * pad + 2 * elHeight).addClass('leaveAlone');
 		minus1h.mousePressed(p.min1hari);
 		minus1h.style('font-family', 'Lato-Regular');
 		minus1h.style('font-size', '14px');
 		plus1h = p.createButton('+ 1 hari');
-		plus1h.position(pad, 7 * pad + 3 * elHeight);
+		plus1h.position(pad, 7 * pad + 3 * elHeight).addClass('leaveAlone');
 		plus1h.mousePressed(p.plu1hari);
 		plus1h.style('font-family', 'Lato-Regular');
 		plus1h.style('font-size', '14px');
 
 		minus10h = p.createButton('- 10 hari');
-		minus10h.position(2 * pad + 54, 5 * pad + 2 * elHeight);
+		minus10h.position(2 * pad + 54, 5 * pad + 2 * elHeight).addClass('leaveAlone');
 		minus10h.mousePressed(p.min10hari);
 		minus10h.style('font-family', 'Lato-Regular');
 		minus10h.style('font-size', '14px');
 		plus10h = p.createButton('+ 10 hari');
-		plus10h.position(2 * pad + 54, 7 * pad + 3 * elHeight);
+		plus10h.position(2 * pad + 54, 7 * pad + 3 * elHeight).addClass('leaveAlone');
 		plus10h.mousePressed(p.plu10hari);
 		plus10h.style('font-family', 'Lato-Regular');
 		plus10h.style('font-size', '14px');
 
 		minus30h = p.createButton('- 30 hari');
-		minus30h.position(3 * pad + 117, 5 * pad + 2 * elHeight);
+		minus30h.position(3 * pad + 117, 5 * pad + 2 * elHeight).addClass('leaveAlone');
 		minus30h.mousePressed(p.min30hari);
 		minus30h.style('font-family', 'Lato-Regular');
 		minus30h.style('font-size', '14px');
 		plus30h = p.createButton('+ 30 hari');
-		plus30h.position(3 * pad + 117, 7 * pad + 3 * elHeight);
+		plus30h.position(3 * pad + 117, 7 * pad + 3 * elHeight).addClass('leaveAlone');
 		plus30h.mousePressed(p.plu30hari);
 		plus30h.style('font-family', 'Lato-Regular');
 		plus30h.style('font-size', '14px');
 
 		minus100h = p.createButton('- 100 hari');
-		minus100h.position(4 * pad + 179, 5 * pad + 2 * elHeight);
+		minus100h.position(4 * pad + 179, 5 * pad + 2 * elHeight).addClass('leaveAlone');
 		minus100h.mousePressed(p.min100hari);
 		minus100h.style('font-family', 'Lato-Regular');
 		minus100h.style('font-size', '14px');
 		plus100h = p.createButton('+ 100 hari');
-		plus100h.position(4 * pad + 179, 7 * pad + 3 * elHeight);
+		plus100h.position(4 * pad + 179, 7 * pad + 3 * elHeight).addClass('leaveAlone');
 		plus100h.mousePressed(p.plu100hari);
 		plus100h.style('font-family', 'Lato-Regular');
 		plus100h.style('font-size', '14px');
