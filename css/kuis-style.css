@@ -9,8 +9,7 @@ SimAstroPosisi is distributed in the hope that it will be useful, but WITHOUT AN
 You should have received a copy of the GNU General Public License along with SimAstroPosisi. If not, see <https://www.gnu.org/licenses/>. */
 
 .container-soal {
-  width: 95%;
-	max-width: 400px;
+  	max-width: 400px;
 	margin: 20px auto 30px auto;
   background-color: white;
 	border: 1px solid black;
