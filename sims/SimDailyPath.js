@@ -26,8 +26,8 @@ let DailyPath = function(p) {
 		// the sceneries, generic and polar ones
 // 		img1 = p.loadImage('../aset/web-celestial-coords-landscape.png');
 // 		img2 = p.loadImage('../aset/web-celestial-coords-landscape-kutub.png');
-		img1 = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/web-celestial-coords-landscape.png');
-		img2 = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/web-celestial-coords-landscape-kutub.png');
+		img1 = p.loadImage('https://anuradnanp.github.io/astroposisi/aset/web-celestial-coords-landscape.png');
+		img2 = p.loadImage('https://anuradnanp.github.io/astroposisi/aset/web-celestial-coords-landscape-kutub.png');
 // 		img1 = p.loadImage('file:///android_asset/aset/web-celestial-coords-landscape.png');
 // 		img2 = p.loadImage('file:///android_asset/aset/web-celestial-coords-landscape-kutub.png');
 
