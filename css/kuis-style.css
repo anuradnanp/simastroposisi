@@ -31,7 +31,7 @@ You should have received a copy of the GNU General Public License along with Sim
   padding: 5px 10px;
   color: white;
 	text-align: left;
-	font-family: montserrat;
+	font-family: montserrat, sans-serif;
 	font-size: 14px;
 	letter-spacing: 0.2px;
 	line-height: 20px;
@@ -58,7 +58,7 @@ You should have received a copy of the GNU General Public License along with Sim
   font-size: 1.5rem;
   font-weight: bold;
   padding: 10px 20px;
-	font-family: montserrat;
+	font-family: montserrat, sans-serif;
 	letter-spacing: 0.2px;
 }
 
@@ -74,7 +74,6 @@ You should have received a copy of the GNU General Public License along with Sim
 
 .info-bantu, .kompetensi {
 	line-height: 1.5;
-	color: #000000;
 }
 
 .nomor-soal {
