@@ -25,10 +25,10 @@ let PosPlanet = function(p) {
 
 	// the fonts
 	p.preload = function() {
-		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
-		LatoBold = p.loadFont('../aset/Lato-Bold.ttf');
-// 		LatoReg = p.loadFont('https://anuradnanp.github.iosimastroposisi/aset/Lato-Regular.ttf');
-// 		LatoBold = p.loadFont('https://anuradnanp.github.iosimastroposisi/aset/Lato-Bold.ttf');
+// 		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
+// 		LatoBold = p.loadFont('../aset/Lato-Bold.ttf');
+		LatoReg = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Regular.ttf');
+		LatoBold = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Bold.ttf');
 // 		LatoReg = p.loadFont('file:///android_asset/aset/Lato-Regular.ttf');
 // 		LatoBold = p.loadFont('file:///android_asset/aset/Lato-Bold.ttf');
 	};
