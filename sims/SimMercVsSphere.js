@@ -14,7 +14,7 @@ let MercVsSphere = function(p) {
 
 		// the fonts
 // 		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
-		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
+		LatoReg = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Regular.ttf');
 // 		LatoReg = p.loadFont('file:///android_asset/aset/Lato-Regular.ttf');
 
 		// the texture materials, providing surfaces and night shade
