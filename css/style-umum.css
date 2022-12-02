@@ -1,0 +1,470 @@
+/* Copyright (C) 2022 Alma Nuradnan Pramudita (email: gocodealpha@gmail.com)
+
+This file is part of SimAstroPosisi.
+
+SimAstroPosisi is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+SimAstroPosisi is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with SimAstroPosisi. If not, see <https://www.gnu.org/licenses/>. */
+
+@font-face {
+	font-family: montserrat;
+	src:
+		url('../fonts/montserrat-regular.otf') format('otf'),
+		url('../fonts/montserrat-regular-webfont.woff') format('woff'),
+		url('../fonts/montserrat-regular-webfont.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: montserrat;
+	src:
+		url('../fonts/montserrat-italic.otf') format('otf'),
+		url('../fonts/montserrat-italic-webfont.woff') format('woff'),
+		url('../fonts/montserrat-italic-webfont.woff2') format('woff2');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: montserrat;
+	src:
+		url('../fonts/montserrat-bold.otf') format('otf'),
+		url('../fonts/montserrat-bold-webfont.woff') format('woff'),
+		url('../fonts/montserrat-bold-webfont.woff2') format('woff2');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: montserrat;
+	src:
+		url('../fonts/montserrat-bolditalic.otf') format('otf'),
+		url('../fonts/montserrat-bolditalic-webfont.woff') format('woff'),
+		url('../fonts/montserrat-bolditalic-webfont.woff2') format('woff2');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: luckiest-guy;
+	src:
+		url('../fonts/luckiestguy-regular.ttf') format('ttf'),
+		url('../fonts/luckiestguy-regular-webfont.woff') format('woff'),
+		url('../fonts/luckiestguy-regular-webfont.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Lato;
+	src:
+		url('../aset/Lato-Regular.ttf') format('ttf')
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Lato;
+	src:
+		url('../aset/Lato-Bold.ttf') format('ttf')
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Lato;
+	src:
+		url('../aset/Lato-Italic.ttf') format('ttf')
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Lato;
+	src:
+		url('../aset/Lato-BoldItalic.ttf') format('ttf')
+	font-weight: bold;
+	font-style: italic;
+}
+
+body {
+	background: #ffffff;
+	font-family: montserrat, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	overflow-x: hidden;
+}
+
+/*---------------------------------------
+    Typography              
+-----------------------------------------*/
+
+h1,h2,h3,h4,h5,h6 {
+  font-style: normal;
+  font-weight: 300;
+	letter-spacing: 0.5px;
+}
+
+h1 {
+	font-size: 30px;
+	padding-bottom: 14px;
+	margin-bottom: 0px;
+	font-family: luckiest-guy;
+	margin-top: 0px !important;
+}
+
+h2 {
+  font-size: 20px;
+	font-family: luckiest-guy;
+	color: #d79922;
+	margin-bottom: 0px !important;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+h4 {
+  color: #666;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+p {
+	color: black;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 26px;
+	letter-spacing: 0.2px;
+}
+
+strong {
+  font-weight: 400;
+}
+
+.btn-success:focus {
+  background-color: #000;
+  border-color: transparent;
+}
+
+/*---------------------------------------
+    General               
+-----------------------------------------*/
+
+html{
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #4d638c;
+  text-decoration: none !important;
+}
+
+a:hover, a:active, a:focus {
+	color: #d79922;
+  outline: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#portfolio,
+#about,
+#blog,
+#contact,
+#single-project,
+#blog-single-post {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.section-title {
+  position: relative;
+  padding-bottom: 62px;
+  text-align: center;
+}
+
+.section-title h3 {
+  color: #555;
+  font-weight: 400;
+  letter-spacing: 4px;
+}
+
+figure {
+	border: 1px solid #bfbfbf;
+	padding: 7px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+figcaption {
+	padding-top: 7px;
+}
+
+/*---------------------------------------
+    Preloader section              
+-----------------------------------------*/
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background: none repeat scroll 0 0 #ffffff;
+}
+
+.sk-spinner-wordpress.sk-spinner {
+  background-color: #bdc3c7;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  position: relative;
+  -webkit-animation: sk-innerCircle 1s linear infinite;
+  animation: sk-innerCircle 1s linear infinite; 
+}
+
+.sk-spinner-wordpress .sk-inner-circle {
+  display: block;
+  background-color: #ffffff;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  border-radius: 8px;
+  top: 5px;
+  left: 5px; 
+}
+
+@-webkit-keyframes sk-innerCircle {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes sk-innerCircle {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+/*---------------------------------------
+    Main Navigation             
+-----------------------------------------*/
+
+.navbar-default {
+	background: #000000;
+	padding: 18px 0;
+	border: none;
+	margin-top: 0px;
+}
+
+.navbar-default .navbar-brand {
+	padding-top: 6px;
+}
+
+.navbar-default .navbar-brand .fa {
+	color: #000;
+	font-size: 42px;
+}
+
+li a {
+	font-family: luckiest-guy;
+}
+
+.navbar-default .navbar-nav li a {
+	color: #fff;
+	font-size: 16px;
+	letter-spacing: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.navbar-default .navbar-nav > li a:hover {
+	color: #d79922 !important;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+	color: #d79922;
+	background-color: transparent;
+}
+
+.navbar-default .navbar-nav li a:hover,
+.navbar-default .navbar-nav .active > a {
+	color: #d79922;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+	color: #d79922;
+	background-color: transparent;
+}
+
+.navbar-default .navbar-toggle {
+	border: none;
+	padding-top: 10px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background: #ffffff;
+	border-color: transparent;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus { 
+	background-color: transparent;
+}
+
+.navbar-toggle {
+	top: 3px;
+	right: 0px;
+	position: absolute;
+}
+
+.appname {
+	display: block;
+	margin-top: 7px;
+	margin-bottom: 7px !important;
+	margin-left: 15px;
+	margin-right: 15px;
+	position: relative;
+	float: center;
+}
+
+/*---------------------------------------
+   About section              
+-----------------------------------------*/
+
+#about .text-center {
+  padding-bottom: 42px;
+}
+
+#about .col-md-8 {
+  padding-left: 0px;
+}
+
+#about .col-md-8 img {
+  padding-right: 22px;
+  padding-bottom: 22px;
+}
+
+#about hr {
+  width: 100%;
+	border-color: #bfbfbf;
+	border-width: 1px;
+}
+
+#about ul {
+	margin-left: 0px;
+  padding-left: 15px;
+	list-style-position: outside;
+}
+
+#about ul li {
+  color: black;
+  font-size: 15px;
+}
+
+#gnu-gpl-3 p,
+#magnet-license p,
+#sil-ofl-1-1 p,
+#apache-2 p
+{
+	font-family: monospace;
+	font-size: 10px;
+	line-height: 15px;
+}
+
+#gnu-gpl-3,
+#magnet-license,
+#sil-ofl-1-1,
+#apache-2
+{
+	max-height: 400px;
+	height: 400px;
+	margin-top: 20px;
+	padding: 10px;
+	background-color: #ffeeaa;
+	overflow: auto;
+}
+
+/*---------------------------------------
+   Mobile Responsive         
+-----------------------------------------*/
+
+@media (max-width: 767px) {
+
+	h1 {
+		font-size: 30px;
+		padding-bottom: 14px;
+		margin-bottom: 0px;
+		font-family: luckiest-guy;
+		margin-top: 0px !important;
+	}
+
+	h2 {
+		font-size: 20px;
+		font-family: luckiest-guy;
+		color: #d79922;
+		margin-bottom: 0px !important;
+	}
+
+	.appname {
+		margin-top: 0px;
+		margin-left: 0px;
+		margin-bottom: 0px !important;
+	}
+
+  h3 {
+    font-size: 22px;
+  }
+
+  .section-title h2 {
+    font-size: 22px;
+    line-height: 35px;
+  }
+
+  .navbar-default {
+    margin-top: 0px;
+    text-align: center;
+  }
+
+  #about .col-md-8 img {
+    padding-right: 0px;
+  }
+
+
+  footer {
+    text-align: center;
+  }
+
+  footer .col-md-4 {
+    padding-top: 0px;
+  }
+
+}
