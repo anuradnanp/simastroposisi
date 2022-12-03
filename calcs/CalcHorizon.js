@@ -69,16 +69,16 @@ let Horizon = function(p) {
 
 		// horizon, shadow, and background images
 		// somehow without raster background, transparent raster image is not rendered well
-// 		img1a = p.loadImage('../aset/web-celestial-coords-landscape-top-down.png');
-// 		img1b = p.loadImage('../aset/web-celestial-coords-landscape-top-down-kutub.png');
-// 		img2 = p.loadImage('../aset/web-celestial-coords-landscape-side.png');
-// 		shade = p.loadImage('../aset/web-celestial-coords-obj-shadow.png');
-// 		latar = p.loadImage('../aset/latar.png');
-		img1a = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/web-celestial-coords-landscape-top-down.png');
-		img1b = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/web-celestial-coords-landscape-top-down-kutub.png');
-		img2 = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/web-celestial-coords-landscape-side.png');
-		shade = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/web-celestial-coords-obj-shadow.png');
-		latar = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/latar.png');
+		img1a = p.loadImage('../aset/web-celestial-coords-landscape-top-down.png');
+		img1b = p.loadImage('../aset/web-celestial-coords-landscape-top-down-kutub.png');
+		img2 = p.loadImage('../aset/web-celestial-coords-landscape-side.png');
+		shade = p.loadImage('../aset/web-celestial-coords-obj-shadow.png');
+		latar = p.loadImage('../aset/latar.png');
+// 		img1a = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/web-celestial-coords-landscape-top-down.png');
+// 		img1b = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/web-celestial-coords-landscape-top-down-kutub.png');
+// 		img2 = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/web-celestial-coords-landscape-side.png');
+// 		shade = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/web-celestial-coords-obj-shadow.png');
+// 		latar = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/latar.png');
 // 		img1a = p.loadImage('file:///android_asset/aset/web-celestial-coords-landscape-top-down.png');
 // 		img1b = p.loadImage('file:///android_asset/aset/web-celestial-coords-landscape-top-down-kutub.png');
 // 		img2 = p.loadImage('file:///android_asset/aset/web-celestial-coords-landscape-side.png');

@@ -35,13 +35,13 @@ let PosPlanet = function(p) {
 
 	p.setup = function() {
 		p.createCanvas(320, 557);
-		batas = p.createGraphics(310, 310);
+		batas = p.createGraphics(310, 314);
 
 		planet = p.createRadio();
-		planet.option(' planet dalam ');
-		planet.option(' planet luar ');
-		planet.selected(' planet luar ');
-		planet.position(2 * pad, 2 * pad + elHeight).addClass('leaveAlone');
+		planet.option('planet dalam');
+		planet.option('planet luar');
+		planet.selected('planet luar');
+		planet.position(2 * pad, 2 * pad + elHeight + 4).addClass('leaveAlone');
 		planet.size(250, elHeight);
 		planet.style('font-family', 'Lato-Regular');
 		planet.style('font-size', '14px');
@@ -288,7 +288,7 @@ let PosPlanet = function(p) {
 		// the heliocentric longitudes were taken from
 		// http://cosinekitty.com/solar_system.html
 		// all orbits are assumed to be circular
-		if (planet.value() == " planet dalam ") {
+		if (planet.value() == "planet dalam") {
 			posBumi = [100 * Math.cos(2 * Math.PI * (saat - 2459846) / 365.24219 + 0.16913 * Math.PI / 180) + 155, - 100 * Math.sin(2 * Math.PI * (saat - 2459846) / 365.24219 + 0.16913 * Math.PI / 180) + 155];
 
 			posMerkurius = [planetRadi[0] * 100 * Math.cos(2 * Math.PI * (saat - 2459846) / (365.24219 * planetPeriod[0]) + 359.89164 * Math.PI / 180) + 155, - planetRadi[0] * 100 * Math.sin(2 * Math.PI * (saat - 2459846) / (365.24219 * planetPeriod[0]) + 359.89164 * Math.PI / 180) + 155];
@@ -317,7 +317,7 @@ let PosPlanet = function(p) {
 
 		tengahBaru = [155 - geser * posBumi[0] + geser * 155, 155 - geser * posBumi[1] + geser * 155];
 
-		if (planet.value() == " planet dalam ") {
+		if (planet.value() == "planet dalam") {
 		posMerkuriusBaru = [posMerkurius[0] - geser * posBumi[0] + geser * 155, posMerkurius[1] - geser * posBumi[1] + geser * 155];
 
 		posVenusBaru = [posVenus[0] - geser * posBumi[0] + geser * 155, posVenus[1] - geser * posBumi[1] + geser * 155];
@@ -350,7 +350,7 @@ let PosPlanet = function(p) {
 		// drawing the orbits, the outer one's radius is fixed
 		// also drawing the distance and direction grid, if selected
 		if (pandang.value() < 1.1) {
-			if (planet.value() == " planet dalam ") {
+			if (planet.value() == "planet dalam") {
 				batas.circle(tengahBaru[0], tengahBaru[1], planetRadi[0] * 200);
 				batas.circle(tengahBaru[0], tengahBaru[1], planetRadi[1] * 200);
 				batas.circle(tengahBaru[0], tengahBaru[1], 200);
@@ -381,7 +381,7 @@ let PosPlanet = function(p) {
 		batas.fill('#ffffff');
 
 		sudut = batas.atan2(tengahBaru[0] - posBumiBaru[0], - tengahBaru[1] + posBumiBaru[1]);
-		if (planet.value() == ' planet dalam ') {
+		if (planet.value() == 'planet dalam') {
 			batas.push();
 			batas.translate(
 				0.8 * (- tengahBaru[1] + posBumiBaru[1]) + posBumiBaru[0] - 5 * batas.cos(sudut + batas.PI / 2),
@@ -430,7 +430,7 @@ let PosPlanet = function(p) {
 		batas.fill('#0000ff');
 		batas.circle(posBumiBaru[0], posBumiBaru[1], 7);
 
-		if (planet.value() == " planet dalam ") {
+		if (planet.value() == "planet dalam") {
 			batas.fill('#777777');
 			batas.circle(posMerkuriusBaru[0], posMerkuriusBaru[1], 7);
 
