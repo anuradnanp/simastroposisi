@@ -9,14 +9,19 @@ SimAstroPosisi is distributed in the hope that it will be useful, but WITHOUT AN
 You should have received a copy of the GNU General Public License along with SimAstroPosisi. If not, see <https://www.gnu.org/licenses/>. */
 
 let SphereTri = function(p) {
+  let LatoReg, calcBul, side1, side2, sep;
+  let camHorCalc, camVerCalc, side1Val, side2Val, sepVal;
+  let pos1, pos2, pos21, dir1To2, dir2To1, coords, dist12;
+  let hi1, hi2, sep12, n, i, distTemp, hiTemp, sep2Temp;
+  let latTemp, longTemp, j, latDown, latUp, longUpDown;
 
 	p.preload = function() {
 
 		// the fonts
-// 		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
-// 		LatoReg = p.loadFont('../aset/Lato-Bold.ttf');
-		LatoReg = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Regular.ttf');
-		LatoReg = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Bold.ttf');
+		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
+		LatoReg = p.loadFont('../aset/Lato-Bold.ttf');
+// 		LatoReg = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Regular.ttf');
+// 		LatoReg = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Bold.ttf');
 // 		LatoReg = p.loadFont('file:///android_asset/aset/Lato-Regular.ttf');
 // 		LatoReg = p.loadFont('file:///android_asset/aset/Lato-Bold.ttf');
 	};
@@ -251,8 +256,7 @@ let SphereTri = function(p) {
 		// the smoothness of the arc, min 5 segments for zero length
 		// and max 20 for 180-deg-length
 		n = p.round(
-			(p.max(p.abs(c - d), hi1 * 180 / p.PI, hi2 * 180 / p.PI) + 45) / 9
-		, 0);
+			(p.max(p.abs(c - d), hi1 * 180 / p.PI, hi2 * 180 / p.PI) + 45) / 9, 0);
 		coords = [];
 		for (i = 0; i < n + 1; i++) {
 			distTemp = dist12 / n * i;
