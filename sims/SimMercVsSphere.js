@@ -231,26 +231,26 @@ let MercVsSphere = function(p) {
 			p.plot(lat1.value(), lat2.value(), long1.value(), long2New);
 		}
 
-		// the inputted points on the Mercator
-		p.push();
-		p.fill('#ff0000');
-
-		// the scaling is such that 180 deg of longitude separations from
-		// the mid of the image is at the very sides of the frame
-		p.circle(
-			(1440 + 4 * (long1.value() - long2New)) / 9,
-			(4770 - 53 * lat1.value()) / 60,
-			8
-		);
-		p.fill('#0000ff');
-
-		// the second location point
-		p.circle(
-			(1440 + 4 * (long2New - long1.value())) / 9,
-			(4770 - 53 * lat2.value()) / 60,
-			8
-		);
-		p.pop();
+// 		// the inputted points on the Mercator
+// 		p.push();
+// 		p.fill('#ff0000');
+// 
+// 		// the scaling is such that 180 deg of longitude separations from
+// 		// the mid of the image is at the very sides of the frame
+// 		p.circle(
+// 			(1440 + 4 * (long1.value() - long2New)) / 9,
+// 			(4770 - 53 * lat1.value()) / 60,
+// 			8
+// 		);
+// 		p.fill('#0000ff');
+// 
+// 		// the second location point
+// 		p.circle(
+// 			(1440 + 4 * (long2New - long1.value())) / 9,
+// 			(4770 - 53 * lat2.value()) / 60,
+// 			8
+// 		);
+// 		p.pop();
 
 			// the inputted points on the globe
 			bul.push();
@@ -286,6 +286,27 @@ let MercVsSphere = function(p) {
 		) {
 			p.plotTri(lat1.value(), lat2.value(), long1.value(), long2New);
 		}
+
+		// the inputted points on the Mercator
+		p.push();
+		p.fill('#ff0000');
+
+		// the scaling is such that 180 deg of longitude separations from
+		// the mid of the image is at the very sides of the frame
+		p.circle(
+			(1440 + 4 * (long1.value() - long2New)) / 9,
+			(4770 - 53 * lat1.value()) / 60,
+			8
+		);
+		p.fill('#0000ff');
+
+		// the second location point
+		p.circle(
+			(1440 + 4 * (long2New - long1.value())) / 9,
+			(4770 - 53 * lat2.value()) / 60,
+			8
+		);
+		p.pop();
 
 		// putting the 3D graphic frame
 		p.image(bul, 0, 159);
