@@ -18,10 +18,10 @@ let SphereTri = function(p) {
 	p.preload = function() {
 
 		// the fonts
-		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
-		LatoReg = p.loadFont('../aset/Lato-Bold.ttf');
-// 		LatoReg = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Regular.ttf');
-// 		LatoReg = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Bold.ttf');
+//		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
+//		LatoReg = p.loadFont('../aset/Lato-Bold.ttf');
+ 		LatoReg = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Regular.ttf');
+ 		LatoReg = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Bold.ttf');
 // 		LatoReg = p.loadFont('file:///android_asset/aset/Lato-Regular.ttf');
 // 		LatoReg = p.loadFont('file:///android_asset/aset/Lato-Bold.ttf');
 	};
