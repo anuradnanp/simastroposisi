@@ -20,24 +20,20 @@ let DailyPath = function(p) {
 	let deltaDeg, latiDeg;
 	let equX, equY, lati, delta, lat, delt, objX0, objY0, objX, objY;
 	let arahKiri, arahKanan, arahBawah;
+  let sub1, sub2, add1, add2;
 
 	p.preload = function() {
 
+		// https://anuradnanp.github.io/simastroposisi/aset/
+		// file:///android_asset/aset/
+
 		// the sceneries, generic and polar ones
-// 		img1 = p.loadImage('../aset/web-celestial-coords-landscape.png');
-// 		img2 = p.loadImage('../aset/web-celestial-coords-landscape-kutub.png');
 		img1 = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/web-celestial-coords-landscape.png');
 		img2 = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/web-celestial-coords-landscape-kutub.png');
-// 		img1 = p.loadImage('file:///android_asset/aset/web-celestial-coords-landscape.png');
-// 		img2 = p.loadImage('file:///android_asset/aset/web-celestial-coords-landscape-kutub.png');
 
 		// the fonts
-// 		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
-// 		LatoBold = p.loadFont('../aset/Lato-Bold.ttf');
 		LatoReg = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Regular.ttf');
 		LatoBold = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Bold.ttf');
-// 		LatoReg = p.loadFont('file:///android_asset/aset/Lato-Regular.ttf');
-// 		LatoBold = p.loadFont('file:///android_asset/aset/Lato-Bold.ttf'); 
 	};
 
 	p.setup = function() {

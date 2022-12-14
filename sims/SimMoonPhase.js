@@ -21,24 +21,17 @@ let MoonPhase = function(p) {
 
 	p.preload = function() {
 
+		// https://anuradnanp.github.io/simastroposisi/aset/
+		// file:///android_asset/aset/
+
 		// the fonts
-// 		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
-// 		LatoBold = p.loadFont('../aset/Lato-Bold.ttf');
 		LatoReg = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Regular.ttf');
 		LatoBold = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Bold.ttf');
-// 		LatoReg = p.loadFont('file:///android_asset/aset/Lato-Regular.ttf');
-// 		LatoBold = p.loadFont('file:///android_asset/aset/Lato-Bold.ttf'); 
 
 		// the texture materials, providing surfaces and night shade
-// 		dayNight = p.loadImage('../aset/day-night.png');
-// 		worldWrap = p.loadImage('../aset/world-wrap.png');
-// 		MoonWrap = p.loadImage('../aset/moon-wrap.png');
 		dayNight = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/day-night.png');
 		worldWrap = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/world-wrap.png');
 		MoonWrap = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/moon-wrap.png');
-// 		dayNight = p.loadImage('file:///android_asset/aset/day-night.png');
-// 		worldWrap = p.loadImage('file:///android_asset/aset/world-wrap.png');
-// 		MoonWrap = p.loadImage('file:///android_asset/aset/moon-wrap.png'); 
 	};
 
 	p.setup = function() {

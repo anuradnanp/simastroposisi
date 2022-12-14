@@ -21,6 +21,8 @@ let Horizon = function(p) {
 	let img1a, img1b, img2, shade, latar;
 	let LatoReg, LatoBold;
 	let i, pathList, pathListEqu, az, alt, bujur, namaBulan, outputAltAz;
+  let sub3, sub4, sub5, sub6, sub7, sub8, sub9, sub9, sub10, sub11;
+  let add3, add4, add5, add6, add7, add8, add9, add10, add11;
 
 	p.setup = function() {
 
@@ -217,31 +219,20 @@ let Horizon = function(p) {
 
 	p.preload = function() {
 
+		// https://anuradnanp.github.io/simastroposisi/aset/
+		// file:///android_asset/aset/
+
 		// horizon, shadow, and background images
 		// somehow without raster background, transparent raster image is not rendered well
-// 		img1a = p.loadImage('../aset/web-celestial-coords-landscape-top-down.png');
-// 		img1b = p.loadImage('../aset/web-celestial-coords-landscape-top-down-kutub.png');
-// 		img2 = p.loadImage('../aset/web-celestial-coords-landscape-side.png');
-// 		shade = p.loadImage('../aset/web-celestial-coords-obj-shadow.png');
-// 		latar = p.loadImage('../aset/latar.png');
 		img1a = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/web-celestial-coords-landscape-top-down.png');
 		img1b = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/web-celestial-coords-landscape-top-down-kutub.png');
 		img2 = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/web-celestial-coords-landscape-side.png');
 		shade = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/web-celestial-coords-obj-shadow.png');
 		latar = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/latar.png');
-// 		img1a = p.loadImage('file:///android_asset/aset/web-celestial-coords-landscape-top-down.png');
-// 		img1b = p.loadImage('file:///android_asset/aset/web-celestial-coords-landscape-top-down-kutub.png');
-// 		img2 = p.loadImage('file:///android_asset/aset/web-celestial-coords-landscape-side.png');
-// 		shade = p.loadImage('file:///android_asset/aset/web-celestial-coords-obj-shadow.png');
-// 		latar = p.loadImage('file:///android_asset/aset/latar.png');
 
 		// the fonts
-		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
-		LatoBold = p.loadFont('../aset/Lato-Bold.ttf');
-// 		LatoReg = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Regular.ttf');
-// 		LatoBold = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Bold.ttf');
-// 		LatoReg = p.loadFont('file:///android_asset/aset/Lato-Regular.ttf');
-// 		LatoBold = p.loadFont('file:///android_asset/aset/Lato-Bold.ttf');
+		LatoReg = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Regular.ttf');
+		LatoBold = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Bold.ttf');
 	};
 
 	// drawing the background

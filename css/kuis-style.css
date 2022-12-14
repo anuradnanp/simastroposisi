@@ -9,57 +9,60 @@ SimAstroPosisi is distributed in the hope that it will be useful, but WITHOUT AN
 You should have received a copy of the GNU General Public License along with SimAstroPosisi. If not, see <https://www.gnu.org/licenses/>. */
 
 .container-soal {
-	max-width: 400px;
-	margin: 20px auto 30px auto;
+  max-width: 400px;
+  margin: 20px auto 30px auto;
   background-color: white;
-	border: 1px solid black;
+  border: 1px solid black;
   border-radius: 5px;
   padding: 10px;
 }
 
 .btn-grid-soal {
   display: grid;
-	grid-template-columns: 100%;
-	gap: 10px;
+  grid-template-columns: 100%;
+  gap: 10px;
   margin: 20px 0;
 }
 
-.btn-soal, .btn-lisensi {
+.btn-soal {
   border: 1px solid black;
   background-color: black;
   border-radius: 5px;
   padding: 5px 10px;
   color: white;
-	text-align: left;
-	font-family: 'Karla', montserrat, sans-serif;
-	font-size: 14px;
-	letter-spacing: 0.2px;
-	line-height: 20px;
+  text-align: left;
+  font-family: "Karla", "Lato", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  cursor: pointer;
 }
 
-.btn-soal:hover, .btn-lisensi:hover {
+.btn-soal:hover,
+.btn-lisensi:hover {
   border-color: black;
   background-color: white;
-	color: black;
+  color: black;
 }
 
 .btn-soal.correct {
   background-color: #d79922;
-	color: black;
-	border: none;
+  color: black;
+  border: none;
 }
 
 .btn-soal.wrong {
   background-color: white;
-	color: black;
+  color: black;
 }
 
-.start-btn, .next-btn {
+.start-btn,
+.next-btn {
   font-size: 1.5rem;
   font-weight: bold;
   padding: 10px 20px;
-	font-family: 'Karla', montserrat, sans-serif;
-	letter-spacing: 0.2px;
+  font-family: "Karla", "Lato", sans-serif;
+  letter-spacing: 0.2px;
 }
 
 .controls {
@@ -72,10 +75,11 @@ You should have received a copy of the GNU General Public License along with Sim
   display: none;
 }
 
-.info-bantu, .kompetensi {
-	line-height: 1.5;
+.info-bantu,
+.kompetensi {
+  line-height: 1.5;
 }
 
 .nomor-soal {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }

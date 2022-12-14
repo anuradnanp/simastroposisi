@@ -14,16 +14,16 @@ let SphereTri = function(p) {
   let pos1, pos2, pos21, dir1To2, dir2To1, coords, dist12;
   let hi1, hi2, sep12, n, i, distTemp, hiTemp, sep2Temp;
   let latTemp, longTemp, j, latDown, latUp, longUpDown;
+  let sub1, add1, sub2, add2, sub3, add3;
 
 	p.preload = function() {
 
+		// https://anuradnanp.github.io/simastroposisi/aset/
+		// file:///android_asset/aset/
+
 		// the fonts
-// 		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
-// 		LatoReg = p.loadFont('../aset/Lato-Bold.ttf');
 		LatoReg = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Regular.ttf');
 		LatoReg = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Bold.ttf');
-// 		LatoReg = p.loadFont('file:///android_asset/aset/Lato-Regular.ttf');
-// 		LatoReg = p.loadFont('file:///android_asset/aset/Lato-Bold.ttf');
 	};
 
 	p.setup = function() {

@@ -13,21 +13,19 @@ let MercVsSphere = function(p) {
   let lat1, long1, lat2, long2, camHor, camVer;
   let lat1Val, long1Val, lat2Val, long2Val, long2New;
 	let n, i, j, coords;
+  let sub1, add1, sub2, add2, sub3, add3, sub4, add4;
 
 	p.preload = function() {
 
+		// https://anuradnanp.github.io/simastroposisi/aset/
+		// file:///android_asset/aset/
+
 		// the fonts
-// 		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
 		LatoReg = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Regular.ttf');
-// 		LatoReg = p.loadFont('file:///android_asset/aset/Lato-Regular.ttf');
 
 		// the texture materials, providing surfaces for the Mercator and the globe
-// 		worldWrap = p.loadImage('../aset/world-wrap.png');
-// 		worldWrapTri = p.loadImage('../aset/world-wrap-triple.png');
 		worldWrap = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/world-wrap.png');
 		worldWrapTri = p.loadImage('https://anuradnanp.github.io/simastroposisi/aset/world-wrap-triple.png');
-// 		worldWrap = p.loadImage('file:///android_asset/aset/world-wrap.png');
-// 		worldWrapTri = p.loadImage('file:///android_asset/aset/world-wrap-triple.png');
 	};
 
 	p.setup = function() {

@@ -9,6 +9,7 @@ SimAstroPosisi is distributed in the hope that it will be useful, but WITHOUT AN
 You should have received a copy of the GNU General Public License along with SimAstroPosisi. If not, see <https://www.gnu.org/licenses/>. */
 
 let GregJDCombo = function(p) {
+
 	// defining some basic measures as reference further down the script
 	let widthCanvas = 320;
 	let pad = 10;
@@ -21,15 +22,16 @@ let GregJDCombo = function(p) {
 	let jdInput, jd2nd, gregRes;
 	let z2nd, f2nd, a2nd, alpha2nd, b2nd, c2nd, d2nd, e2nd;
 	let day2nd, hourf2nd, hour2nd, minutef2nd, minute2nd, month2nd, year2nd, namaMonth2nd, secondf2nd;
+  let sub1, add1, sub2, add2, sub3, add3, sub4, add4, sub5, add5;
 
 	// preloading the font
 	p.preload = function() {
-// 		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
-// 		LatoBold = p.loadFont('../aset/Lato-Bold.ttf');
+
+		// https://anuradnanp.github.io/simastroposisi/aset/
+		// file:///android_asset/aset/
+
 		LatoReg = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Regular.ttf');
 		LatoBold = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Bold.ttf');
-// 		LatoReg = p.loadFont('file:///android_asset/aset/Lato-Regular.ttf');
-// 		LatoBold = p.loadFont('file:///android_asset/aset/Lato-Bold.ttf');
 	};
 
 	p.setup = function() {
