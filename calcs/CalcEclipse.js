@@ -173,7 +173,7 @@ let Eclipse = function(p) {
 		// the element for date, month, year
 		tanggal = p.createP('');
 		tanggal.size(300, 20);
-		tanggal.position(pad, 468);
+		tanggal.position(pad, 468).addClass('leaveAlone');
 		tanggal.id('tanggal');
 		tanggal.style('text-align', 'right');
 		tanggal.style('font-family', 'Lato-Bold');
@@ -182,7 +182,7 @@ let Eclipse = function(p) {
 		// the element for hour and minute
 		jam = p.createP('');
 		jam.size(300, 20);
-		jam.position(pad, 488);
+		jam.position(pad, 488).addClass('leaveAlone');
 		jam.id('jam');
 		jam.style('text-align', 'right');
 		jam.style('font-family', 'Lato-Bold');

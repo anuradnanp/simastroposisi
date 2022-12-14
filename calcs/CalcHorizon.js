@@ -43,26 +43,176 @@ let Horizon = function(p) {
 		s = p.createSlider(0, 59, 0, 1);
 
 		// the position of the sliders
-		lat.position(200, 1 * pad);
-		long.position(200, 2 * pad + 1 * elHeight);
-		alph.position(200, 3 * pad + 2 * elHeight);
-		delt.position(200, 4 * pad + 3 * elHeight);
-		m.position(200, 5 * pad + 4 * elHeight);
-		d.position(200, 6 * pad + 5 * elHeight);
-		h.position(200, 9 * pad + 6 * elHeight + (lebarCanvas - 7 * pad) + pad + 2 * elHeight);
-		mi.position(200, 10 * pad + 7 * elHeight + (lebarCanvas - 7 * pad) + pad + 2 * elHeight);
-		s.position(200, 11 * pad + 8 * elHeight + (lebarCanvas - 7 * pad) + pad + 2 * elHeight);
+		lat.position(201, 1 * pad).id('val3');
+		long.position(201, 2 * pad + 1 * elHeight).id('val4');
+		alph.position(201, 3 * pad + 2 * elHeight).id('val5');
+		delt.position(201, 4 * pad + 3 * elHeight).id('val6');
+		m.position(201, 5 * pad + 4 * elHeight).id('val7');
+		d.position(201, 6 * pad + 5 * elHeight).id('val8');
+		h.position(201, 9 * pad + 6 * elHeight + (lebarCanvas - 7 * pad) + pad + 2 * elHeight).id('val9');
+		mi.position(201, 10 * pad + 7 * elHeight + (lebarCanvas - 7 * pad) + pad + 2 * elHeight).id('val10');
+		s.position(201, 11 * pad + 8 * elHeight + (lebarCanvas - 7 * pad) + pad + 2 * elHeight).id('val11');
 
 		// the size of the sliders
-		lat.size(100, elHeight);
-		long.size(100, elHeight);
-		alph.size(100, elHeight);
-		delt.size(100, elHeight);
-		m.size(100, elHeight);
-		d.size(100, elHeight);
-		h.size(100, elHeight);
-		mi.size(100, elHeight);
-		s.size(100, elHeight);
+		lat.size(80, elHeight);
+		long.size(80, elHeight);
+		alph.size(80, elHeight);
+		delt.size(80, elHeight);
+		m.size(80, elHeight);
+		d.size(80, elHeight);
+		h.size(80, elHeight);
+		mi.size(80, elHeight);
+		s.size(80, elHeight);
+
+		// buttons for better precision
+		sub3 = p.createButton('--');
+		sub4 = p.createButton('--');
+		sub5 = p.createButton('--');
+		sub6 = p.createButton('--');
+		sub7 = p.createButton('--');
+		sub8 = p.createButton('--');
+		sub9 = p.createButton('--');
+		sub10 = p.createButton('--');
+		sub11 = p.createButton('--');
+		add3 = p.createButton('+');
+		add4 = p.createButton('+');
+		add5 = p.createButton('+');
+		add6 = p.createButton('+');
+		add7 = p.createButton('+');
+		add8 = p.createButton('+');
+		add9 = p.createButton('+');
+		add10 = p.createButton('+');
+		add11 = p.createButton('+');
+
+		sub3.position(172, 9);
+		sub4.position(172, 35);
+		sub5.position(172, 61);
+		sub6.position(172, 87);
+		sub7.position(172, 113);
+		sub8.position(172, 139);
+		sub9.position(172, 470);
+		sub10.position(172, 496);
+		sub11.position(172, 522);
+		add3.position(281, 9);
+		add4.position(281, 35);
+		add5.position(281, 61);
+		add6.position(281, 87);
+		add7.position(281, 113);
+		add8.position(281, 139);
+		add9.position(281, 470);
+		add10.position(281, 496);
+		add11.position(281, 522);
+
+		sub3.addClass('leaveAlone').mousePressed(p.sub3Fu).style('font-size', '10px').style('padding', '2px 8px');
+		sub4.addClass('leaveAlone').mousePressed(p.sub4Fu).style('font-size', '10px').style('padding', '2px 8px');
+		sub5.addClass('leaveAlone').mousePressed(p.sub5Fu).style('font-size', '10px').style('padding', '2px 8px');
+		sub6.addClass('leaveAlone').mousePressed(p.sub6Fu).style('font-size', '10px').style('padding', '2px 8px');
+		sub7.addClass('leaveAlone').mousePressed(p.sub7Fu).style('font-size', '10px').style('padding', '2px 8px');
+		sub8.addClass('leaveAlone').mousePressed(p.sub8Fu).style('font-size', '10px').style('padding', '2px 8px');
+		sub9.addClass('leaveAlone').mousePressed(p.sub9Fu).style('font-size', '10px').style('padding', '2px 8px');
+		sub10.addClass('leaveAlone').mousePressed(p.sub10Fu).style('font-size', '10px').style('padding', '2px 8px');
+		sub11.addClass('leaveAlone').mousePressed(p.sub11Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add3.addClass('leaveAlone').mousePressed(p.add3Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add4.addClass('leaveAlone').mousePressed(p.add4Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add5.addClass('leaveAlone').mousePressed(p.add5Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add6.addClass('leaveAlone').mousePressed(p.add6Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add7.addClass('leaveAlone').mousePressed(p.add7Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add8.addClass('leaveAlone').mousePressed(p.add8Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add9.addClass('leaveAlone').mousePressed(p.add9Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add10.addClass('leaveAlone').mousePressed(p.add10Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add11.addClass('leaveAlone').mousePressed(p.add11Fu).style('font-size', '10px').style('padding', '2px 8px');
+	};
+
+	// functions to add or subtract with buttons
+	p.sub3Fu = function() {
+		if (lat.value() > - 90) {
+			document.getElementById("val3").value = lat.value() - 1;
+		}
+	};
+	p.sub4Fu = function() {
+		if (long.value() > - 180) {
+			document.getElementById("val4").value = long.value() - 1;
+		}
+	};
+	p.sub5Fu = function() {
+		if (alph.value() > 0) {
+			document.getElementById("val5").value = alph.value() - 1;
+		}
+	};
+	p.sub6Fu = function() {
+		if (delt.value() > - 90) {
+			document.getElementById("val6").value = delt.value() - 1;
+		}
+	};
+	p.sub7Fu = function() {
+		if (m.value() > 1) {
+			document.getElementById("val7").value = m.value() - 1;
+		}
+	};
+	p.sub8Fu = function() {
+		if (d.value() > 1) {
+			document.getElementById("val8").value = d.value() - 1;
+		}
+	};
+	p.sub9Fu = function() {
+		if (h.value() > 0) {
+			document.getElementById("val9").value = h.value() - 1;
+		}
+	};
+	p.sub10Fu = function() {
+		if (mi.value() > 0) {
+			document.getElementById("val10").value = mi.value() - 1;
+		}
+	};
+	p.sub11Fu = function() {
+		if (s.value() > 0) {
+			document.getElementById("val11").value = s.value() - 1;
+		}
+	};
+	p.add3Fu = function() {
+		if (lat.value() < 90) {
+			document.getElementById("val3").value = lat.value() + 1;
+		}
+	};
+	p.add4Fu = function() {
+		if (long.value() < 180) {
+			document.getElementById("val4").value = long.value() + 1;
+		}
+	};
+	p.add5Fu = function() {
+		if (alph.value() < 24) {
+			document.getElementById("val5").value = alph.value() + 1;
+		}
+	};
+	p.add6Fu = function() {
+		if (delt.value() < 90) {
+			document.getElementById("val6").value = delt.value() + 1;
+		}
+	};
+	p.add7Fu = function() {
+		if (m.value() < 12) {
+			document.getElementById("val7").value = m.value() + 1;
+		}
+	};
+	p.add8Fu = function() {
+		if (d.value() < 31) {
+			document.getElementById("val8").value = d.value() + 1;
+		}
+	};
+	p.add9Fu = function() {
+		if (h.value() < 23) {
+			document.getElementById("val9").value = h.value() + 1;
+		}
+	};
+	p.add10Fu = function() {
+		if (mi.value() < 59) {
+			document.getElementById("val10").value = mi.value() + 1;
+		}
+	};
+	p.add11Fu = function() {
+		if (s.value() < 59) {
+			document.getElementById("val11").value = s.value() + 1;
+		}
 	};
 
 	p.preload = function() {
@@ -86,10 +236,10 @@ let Horizon = function(p) {
 // 		latar = p.loadImage('file:///android_asset/aset/latar.png');
 
 		// the fonts
-// 		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
-// 		LatoBold = p.loadFont('../aset/Lato-Bold.ttf');
-		LatoReg = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Regular.ttf');
-		LatoBold = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Bold.ttf');
+		LatoReg = p.loadFont('../aset/Lato-Regular.ttf');
+		LatoBold = p.loadFont('../aset/Lato-Bold.ttf');
+// 		LatoReg = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Regular.ttf');
+// 		LatoBold = p.loadFont('https://anuradnanp.github.io/simastroposisi/aset/Lato-Bold.ttf');
 // 		LatoReg = p.loadFont('file:///android_asset/aset/Lato-Regular.ttf');
 // 		LatoBold = p.loadFont('file:///android_asset/aset/Lato-Bold.ttf');
 	};

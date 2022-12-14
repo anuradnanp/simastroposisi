@@ -56,7 +56,7 @@ let MoonPhase = function(p) {
 		posBulLabel.style('font-family', 'Lato-Regular');
 		posBulLabel.style('font-size', '14px');
 		posBulLabel.style('font-weight', 'normal');
-		posBulLabel.position(pad, pad);
+		posBulLabel.position(pad, pad).addClass('leaveAlone');
 
 		posBul = p.createSlider(0, 2 * p.PI, 2 * p.PI * 14 / 60, 2 * p.PI / 60);
 		posBul.size(260, elHeight);
@@ -66,7 +66,7 @@ let MoonPhase = function(p) {
 		posMatLabel.style('font-family', 'Lato-Regular');
 		posMatLabel.style('font-size', '14px');
 		posMatLabel.style('font-weight', 'normal');
-		posMatLabel.position(pad, 3 * pad + 2 * elHeight);
+		posMatLabel.position(pad, 3 * pad + 2 * elHeight).addClass('leaveAlone');
 
 		posMat = p.createSlider(0, 2 * p.PI, 2 * p.PI * 14 / 60, 2 * p.PI / 60);
 		posMat.size(260, elHeight);
@@ -76,7 +76,7 @@ let MoonPhase = function(p) {
 		posNodeLabel.style('font-family', 'Lato-Regular');
 		posNodeLabel.style('font-size', '14px');
 		posNodeLabel.style('font-weight', 'normal');
-		posNodeLabel.position(pad, 5 * pad + 4 * elHeight);
+		posNodeLabel.position(pad, 5 * pad + 4 * elHeight).addClass('leaveAlone');
 
 		posNode = p.createSlider(0, 2 * p.PI, 2 * p.PI * 14 / 60, 2 * p.PI / 60);
 		posNode.size(260, elHeight);

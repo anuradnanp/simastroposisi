@@ -33,17 +33,17 @@ let SphereTri = function(p) {
 		calcBul.position(5, 170).style('border-radius', '0');
 
 		// the inputs for side arc lengths and the angle between
-		p.createP('panjang sisi merah :').style('font-family', 'Lato-Regular').style('font-size', '14px').style('font-weight', 'normal').position(10, 10).style('width', '190px').style('text-align', 'right').style('color', '#ff0000');
+		p.createP('panjang sisi merah :').style('font-family', 'Lato-Regular').style('font-size', '14px').style('font-weight', 'normal').position(10, 10).style('width', '190px').style('text-align', 'right').style('color', '#ff0000').addClass('leaveAlone');
 		side1 = p.createSlider(20, 150, 30, 0.5);
-		side1.size(300, 15).position(10, 30);
+		side1.size(230, 15).position(42, 30).id('val5');
 
-		p.createP('panjang sisi biru :').style('font-family', 'Lato-Regular').style('font-size', '14px').style('font-weight', 'normal').position(10, 60).style('width', '190px').style('text-align', 'right').style('color', '#0000ff');
+		p.createP('panjang sisi biru :').style('font-family', 'Lato-Regular').style('font-size', '14px').style('font-weight', 'normal').position(10, 60).style('width', '190px').style('text-align', 'right').style('color', '#0000ff').addClass('leaveAlone');
 		side2 = p.createSlider(20, 150, 60, 0.5);
-		side2.size(300, 15).position(10, 80);
+		side2.size(230, 15).position(42, 80).id('val6');
 
-		p.createP('sudut antara merah dan biru :').style('font-family', 'Lato-Regular').style('font-size', '14px').style('font-weight', 'normal').position(10, 110).style('width', '190px').style('text-align', 'right').style('color', '#000000');
+		p.createP('sudut antara merah dan biru :').style('font-family', 'Lato-Regular').style('font-size', '14px').style('font-weight', 'normal').position(10, 110).style('width', '190px').style('text-align', 'right').style('color', '#000000').addClass('leaveAlone');
 		sep = p.createSlider(20, 150, 50, 0.5);
-		sep.size(300, 15).position(10, 130);
+		sep.size(230, 15).position(42, 130).id('val7');
 
 		// horizontal cam position
 		camHorCalc = p.createSlider(0, 2 * p.PI, 3 * p.PI / 2, p.PI / 30);
@@ -58,13 +58,61 @@ let SphereTri = function(p) {
 		// the placeholders to show the coords as confirmation of values picked by users
 		// initially blank, will be filled by other functions
 		side1Val = p.createP('');
-		side1Val.position(210, 10).id('side1Val').style('font-family', 'Lato-Bold').style('font-size', '17px').style('color', '#ffffff').style('text-shadow', '0px 0px 4px #ff0000');
+		side1Val.position(210, 10).id('side1Val').style('font-family', 'Lato-Bold').style('font-size', '17px').style('color', '#ffffff').style('text-shadow', '0px 0px 4px #ff0000').addClass('leaveAlone');
 
 		side2Val = p.createP('');
-		side2Val.position(210, 60).id('side2Val').style('font-family', 'Lato-Bold').style('font-size', '17px').style('color', '#ffffff').style('text-shadow', '0px 0px 4px #0000ff');
+		side2Val.position(210, 60).id('side2Val').style('font-family', 'Lato-Bold').style('font-size', '17px').style('color', '#ffffff').style('text-shadow', '0px 0px 4px #0000ff').addClass('leaveAlone');
 
 		sepVal = p.createP('');
-		sepVal.position(210, 110).id('sepVal').style('font-family', 'Lato-Bold').style('font-size', '17px').style('color', '#ffffff').style('text-shadow', '0px 0px 4px #000000');
+		sepVal.position(210, 110).id('sepVal').style('font-family', 'Lato-Bold').style('font-size', '17px').style('color', '#ffffff').style('text-shadow', '0px 0px 4px #000000').addClass('leaveAlone');
+
+		// buttons for better precision
+		sub1 = p.createButton('--');
+		sub1.position(10, 31).addClass('leaveAlone').mousePressed(p.sub1Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add1 = p.createButton('+');
+		add1.position(275, 31).addClass('leaveAlone').mousePressed(p.add1Fu).style('font-size', '10px').style('padding', '2px 8px');
+
+		sub2 = p.createButton('--');
+		sub2.position(10, 81).addClass('leaveAlone').mousePressed(p.sub2Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add2 = p.createButton('+');
+		add2.position(275, 81).addClass('leaveAlone').mousePressed(p.add2Fu).style('font-size', '10px').style('padding', '2px 8px');
+
+		sub3 = p.createButton('--');
+		sub3.position(10, 131).addClass('leaveAlone').mousePressed(p.sub3Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add3 = p.createButton('+');
+		add3.position(275, 131).addClass('leaveAlone').mousePressed(p.add3Fu).style('font-size', '10px').style('padding', '2px 8px');
+	};
+
+	// functions to add or subtract with buttons
+	p.sub1Fu = function() {
+		if (side1.value() > 20) {
+			document.getElementById("val5").value = side1.value() - 0.5;
+		}
+	};
+	p.add1Fu = function() {
+		if (side1.value() < 150) {
+			document.getElementById("val5").value = side1.value() + 0.5;
+		}
+	};
+	p.sub2Fu = function() {
+		if (side2.value() > 20) {
+			document.getElementById("val6").value = side2.value() - 0.5;
+		}
+	};
+	p.add2Fu = function() {
+		if (side2.value() < 150) {
+			document.getElementById("val6").value = side2.value() + 0.5;
+		}
+	};
+	p.sub3Fu = function() {
+		if (sep.value() > 20) {
+			document.getElementById("val7").value = sep.value() - 0.5;
+		}
+	};
+	p.add3Fu = function() {
+		if (sep.value() < 150) {
+			document.getElementById("val7").value = sep.value() + 0.5;
+		}
 	};
 
 	// confirming the side length and angle picked by users

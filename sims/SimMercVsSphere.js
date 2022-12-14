@@ -43,21 +43,21 @@ let MercVsSphere = function(p) {
 		bul.setAttributes('antialias', true);
 
 		// the inputs and their labels, trying chained attributes to save lines
-		p.createP('lintang posisi merah :').style('font-family', 'Lato-Regular').style('font-size', '14px').style('font-weight', 'normal').position(10, 10).style('width', '150px').style('text-align', 'right').style('color', '#ff0000');
+		p.createP('lintang posisi merah :').style('font-family', 'Lato-Regular').style('font-size', '14px').style('font-weight', 'normal').position(10, 10).style('width', '150px').style('text-align', 'right').style('color', '#ff0000').addClass('leaveAlone');
 		lat1 = p.createSlider(- 90, 90, - 30, 0.5);
-		lat1.size(300, 15).position(10, 30);
+		lat1.size(230, 15).position(42, 30).id('val1');
 
-		p.createP('bujur posisi merah :').style('font-family', 'Lato-Regular').style('font-size', '14px').style('font-weight', 'normal').position(10, 60).style('width', '150px').style('text-align', 'right').style('color', '#ff0000');
+		p.createP('bujur posisi merah :').style('font-family', 'Lato-Regular').style('font-size', '14px').style('font-weight', 'normal').position(10, 60).style('width', '150px').style('text-align', 'right').style('color', '#ff0000').addClass('leaveAlone');
 		long1 = p.createSlider(- 180, 180, 30, 0.5);
-		long1.size(300, 15).position(10, 80);
+		long1.size(230, 15).position(42, 80).id('val2');
 
-		p.createP('lintang posisi biru :').style('font-family', 'Lato-Regular').style('font-size', '14px').style('font-weight', 'normal').position(10, 110).style('width', '150px').style('text-align', 'right').style('color', '#0000ff');
+		p.createP('lintang posisi biru :').style('font-family', 'Lato-Regular').style('font-size', '14px').style('font-weight', 'normal').position(10, 110).style('width', '150px').style('text-align', 'right').style('color', '#0000ff').addClass('leaveAlone');
 		lat2 = p.createSlider(- 90, 90, 30, 0.5);
-		lat2.size(300, 15).position(10, 130);
+		lat2.size(230, 15).position(42, 130).id('val3');
 
-		p.createP('bujur posisi biru :').style('font-family', 'Lato-Regular').style('font-size', '14px').style('font-weight', 'normal').position(10, 160).style('width', '150px').style('text-align', 'right').style('color', '#0000ff');
+		p.createP('bujur posisi biru :').style('font-family', 'Lato-Regular').style('font-size', '14px').style('font-weight', 'normal').position(10, 160).style('width', '150px').style('text-align', 'right').style('color', '#0000ff').addClass('leaveAlone');
 		long2 = p.createSlider(- 180, 180, - 40, 0.5);
-		long2.size(300, 15).position(10, 180);
+		long2.size(230, 15).position(42, 180).id('val4');
 
 		// enabling change of horizontal position of the cam
 		camHor = p.createSlider(0, 2 * p.PI, 3 * p.PI / 2, p.PI / 30);
@@ -72,16 +72,81 @@ let MercVsSphere = function(p) {
 		// the placeholders to show the coords as confirmation of values picked by users
 		// initially blank, will be filled by other functions
 		lat1Val = p.createP('');
-		lat1Val.position(170, 10).id('lat1Val').style('font-family', 'Lato-Regular').style('font-size', '14px').style('color', '#ff0000');
+		lat1Val.position(170, 10).id('lat1Val').style('font-family', 'Lato-Regular').style('font-size', '14px').style('color', '#ff0000').addClass('leaveAlone');
 
 		long1Val = p.createP('');
-		long1Val.position(170, 60).id('long1Val').style('font-family', 'Lato-Regular').style('font-size', '14px').style('color', '#ff0000');
+		long1Val.position(170, 60).id('long1Val').style('font-family', 'Lato-Regular').style('font-size', '14px').style('color', '#ff0000').addClass('leaveAlone');
 
 		lat2Val = p.createP('');
-		lat2Val.position(170, 110).id('lat2Val').style('font-family', 'Lato-Regular').style('font-size', '14px').style('color', '#0000ff');
+		lat2Val.position(170, 110).id('lat2Val').style('font-family', 'Lato-Regular').style('font-size', '14px').style('color', '#0000ff').addClass('leaveAlone');
 
 		long2Val = p.createP('');
-		long2Val.position(170, 160).id('long2Val').style('font-family', 'Lato-Regular').style('font-size', '14px').style('color', '#0000ff');
+		long2Val.position(170, 160).id('long2Val').style('font-family', 'Lato-Regular').style('font-size', '14px').style('color', '#0000ff').addClass('leaveAlone');
+
+		// adding buttons for better precision in inputting values
+		sub1 = p.createButton('--');
+		sub1.position(8, 31).addClass('leaveAlone').mousePressed(p.sub1Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add1 = p.createButton('+');
+		add1.position(275, 31).addClass('leaveAlone').mousePressed(p.add1Fu).style('font-size', '10px').style('padding', '2px 8px');
+
+		sub2 = p.createButton('--');
+		sub2.position(8, 81).addClass('leaveAlone').mousePressed(p.sub2Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add2 = p.createButton('+');
+		add2.position(275, 81).addClass('leaveAlone').mousePressed(p.add2Fu).style('font-size', '10px').style('padding', '2px 8px');
+
+		sub3 = p.createButton('--');
+		sub3.position(8, 131).addClass('leaveAlone').mousePressed(p.sub3Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add3 = p.createButton('+');
+		add3.position(275, 131).addClass('leaveAlone').mousePressed(p.add3Fu).style('font-size', '10px').style('padding', '2px 8px');
+
+		sub4 = p.createButton('--');
+		sub4.position(8, 181).addClass('leaveAlone').mousePressed(p.sub4Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add4 = p.createButton('+');
+		add4.position(275, 181).addClass('leaveAlone').mousePressed(p.add4Fu).style('font-size', '10px').style('padding', '2px 8px');
+	};
+
+	// the functions run by the buttons, the number will be
+	// twice the number of the sliders
+	// sliders are not precise but can provide continous variation
+	p.sub1Fu = function() {
+		if (lat1.value() > - 90) {
+			document.getElementById("val1").value = lat1.value() - 0.5;
+		}
+	};
+	p.add1Fu = function() {
+		if (lat1.value() < 90) {
+			document.getElementById("val1").value = lat1.value() + 0.5;
+		}
+	};
+	p.sub2Fu = function() {
+		if (long1.value() > - 180) {
+			document.getElementById("val2").value = long1.value() - 0.5;
+		}
+	};
+	p.add2Fu = function() {
+		if (long1.value() < 180) {
+			document.getElementById("val2").value = long1.value() + 0.5;
+		}
+	};
+	p.sub3Fu = function() {
+		if (lat2.value() > - 90) {
+			document.getElementById("val3").value = lat2.value() - 0.5;
+		}
+	};
+	p.add3Fu = function() {
+		if (lat2.value() < 90) {
+			document.getElementById("val3").value = lat2.value() + 0.5;
+		}
+	};
+	p.sub4Fu = function() {
+		if (long2.value() > - 180) {
+			document.getElementById("val4").value = long2.value() - 0.5;
+		}
+	};
+	p.add4Fu = function() {
+		if (long2.value() < 180) {
+			document.getElementById("val4").value = long2.value() + 0.5;
+		}
 	};
 
 	// here they are, the commands to display the coords picked by users

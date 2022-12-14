@@ -47,28 +47,28 @@ let GregJDCombo = function(p) {
 
 		// input for gregorian month
 		bulan1st = p.createSlider(1, 12, 3, 1);
-		bulan1st.position(150, 3 * pad + elHeight + 35);
-		bulan1st.size(150, elHeight);
+		bulan1st.position(133, 3 * pad + elHeight + 35);
+		bulan1st.size(140, elHeight).id('val1');
 
 		// input for gregorian day
 		tanggal1st = p.createSlider(1, 31, 17, 1);
-		tanggal1st.position(150, 4 * pad + 2 * elHeight + 35);
-		tanggal1st.size(150, elHeight);
+		tanggal1st.position(133, 4 * pad + 2 * elHeight + 35);
+		tanggal1st.size(140, elHeight).id('val2');
 
 		// input for gregorian hour
 		jam1st = p.createSlider(0, 23, 7, 1);
-		jam1st.position(150, 5 * pad + 3 * elHeight + 35);
-		jam1st.size(150, elHeight);
+		jam1st.position(133, 5 * pad + 3 * elHeight + 35);
+		jam1st.size(140, elHeight).id('val3');
 
 		// input for gregorian minute
 		menit1st = p.createSlider(0, 59, 23, 1);
-		menit1st.position(150, 6 * pad + 4 * elHeight + 35);
-		menit1st.size(150, elHeight);
+		menit1st.position(133, 6 * pad + 4 * elHeight + 35);
+		menit1st.size(140, elHeight).id('val4');
 
 		// input for gregorian second
 		detik1st = p.createSlider(0, 59, 41, 1);
-		detik1st.position(150, 7 * pad + 5 * elHeight + 35);
-		detik1st.size(150, elHeight);
+		detik1st.position(133, 7 * pad + 5 * elHeight + 35);
+		detik1st.size(140, elHeight).id('val5');
 
 		// input for julian date
 		jdInput = p.createInput('2459396.50694').addClass('leaveAlone');
@@ -76,6 +76,84 @@ let GregJDCombo = function(p) {
 		jdInput.size(150, 1.5 * elHeight);
 		jdInput.style('font-family', 'Lato-Regular');
 		jdInput.style('font-size', '14px');
+
+		// buttons for better precision
+		sub1 = p.createButton('--');
+		sub1.position(100, 80).addClass('leaveAlone').mousePressed(p.sub1Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add1 = p.createButton('+');
+		add1.position(275, 80).addClass('leaveAlone').mousePressed(p.add1Fu).style('font-size', '10px').style('padding', '2px 8px');
+
+		sub2 = p.createButton('--');
+		sub2.position(100, 104).addClass('leaveAlone').mousePressed(p.sub2Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add2 = p.createButton('+');
+		add2.position(275, 104).addClass('leaveAlone').mousePressed(p.add2Fu).style('font-size', '10px').style('padding', '2px 8px');
+
+		sub3 = p.createButton('--');
+		sub3.position(100, 128).addClass('leaveAlone').mousePressed(p.sub3Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add3 = p.createButton('+');
+		add3.position(275, 128).addClass('leaveAlone').mousePressed(p.add3Fu).style('font-size', '10px').style('padding', '2px 8px');
+
+		sub4 = p.createButton('--');
+		sub4.position(100, 152).addClass('leaveAlone').mousePressed(p.sub4Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add4 = p.createButton('+');
+		add4.position(275, 152).addClass('leaveAlone').mousePressed(p.add4Fu).style('font-size', '10px').style('padding', '2px 8px');
+
+		sub5 = p.createButton('--');
+		sub5.position(100, 176).addClass('leaveAlone').mousePressed(p.sub5Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add5 = p.createButton('+');
+		add5.position(275, 176).addClass('leaveAlone').mousePressed(p.add5Fu).style('font-size', '10px').style('padding', '2px 8px');
+	};
+
+	// functions to add or subtract with buttons
+	p.sub1Fu = function() {
+		if (bulan1st.value() > 1) {
+			document.getElementById("val1").value = bulan1st.value() - 1;
+		}
+	};
+	p.add1Fu = function() {
+		if (bulan1st.value() < 12) {
+			document.getElementById("val1").value = bulan1st.value() + 1;
+		}
+	};
+	p.sub2Fu = function() {
+		if (tanggal1st.value() > 1) {
+			document.getElementById("val2").value = tanggal1st.value() - 1;
+		}
+	};
+	p.add2Fu = function() {
+		if (tanggal1st.value() < 31) {
+			document.getElementById("val2").value = tanggal1st.value() + 1;
+		}
+	};
+	p.sub3Fu = function() {
+		if (jam1st.value() > 0) {
+			document.getElementById("val3").value = jam1st.value() - 1;
+		}
+	};
+	p.add3Fu = function() {
+		if (jam1st.value() < 23) {
+			document.getElementById("val3").value = jam1st.value() + 1;
+		}
+	};
+	p.sub4Fu = function() {
+		if (menit1st.value() > 0) {
+			document.getElementById("val4").value = menit1st.value() - 1;
+		}
+	};
+	p.add4Fu = function() {
+		if (menit1st.value() < 59) {
+			document.getElementById("val4").value = menit1st.value() + 1;
+		}
+	};
+	p.sub5Fu = function() {
+		if (detik1st.value() > 0) {
+			document.getElementById("val5").value = detik1st.value() - 1;
+		}
+	};
+	p.add5Fu = function() {
+		if (detik1st.value() < 59) {
+			document.getElementById("val5").value = detik1st.value() + 1;
+		}
 	};
 
 	// reserving high framerate only for interaction
@@ -129,40 +207,40 @@ let GregJDCombo = function(p) {
 		// to be displayed so users can check their input
 		switch (bulan1st.value()) {
 			case 1:
-				namabulan1st = 'Januari';
+				namabulan1st = 'Jan';
 				break;
 			case 2:
-				namabulan1st = 'Februari';
+				namabulan1st = 'Feb';
 				break;
 			case 3:
-				namabulan1st = 'Maret';
+				namabulan1st = 'Mar';
 				break;
 			case 4:
-				namabulan1st = 'April';
+				namabulan1st = 'Apr';
 				break;
 			case 5:
 				namabulan1st = 'Mei';
 				break;
 			case 6:
-				namabulan1st = 'Juni';
+				namabulan1st = 'Jun';
 				break;
 			case 7:
-				namabulan1st = 'Juli';
+				namabulan1st = 'Jul';
 				break;
 			case 8:
-				namabulan1st = 'Agustus';
+				namabulan1st = 'Agu';
 				break;
 			case 9:
-				namabulan1st = 'September';
+				namabulan1st = 'Sept';
 				break;
 			case 10:
-				namabulan1st = 'Oktober';
+				namabulan1st = 'Okt';
 				break;
 			case 11:
-				namabulan1st = 'November';
+				namabulan1st = 'Nov';
 				break;
 			case 12:
-				namabulan1st = 'Desember';
+				namabulan1st = 'Des';
 		}
 
 		// first calculator label

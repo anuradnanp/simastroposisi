@@ -49,11 +49,49 @@ let DailyPath = function(p) {
 		deltaDeg = p.createSlider(- 90, 90, 60, 1);
 		latiDeg = p.createSlider(- 90, 90, 70, 1);
 
-		deltaDeg.position(160, pad);
-		latiDeg.position(160, elHeight + 2 * pad);
+		deltaDeg.position(176, pad - 5).id('val1');
+		latiDeg.position(176, elHeight + 2 * pad - 5).id('val2');
 
-		deltaDeg.size(120, elHeight);
-		latiDeg.size(120, elHeight);
+		deltaDeg.size(93, elHeight);
+		latiDeg.size(93, elHeight);
+
+		// buttons for better precision
+		sub1 = p.createButton('--');
+		sub2 = p.createButton('--');
+		add1 = p.createButton('+');
+		add2 = p.createButton('+');
+
+		sub1.position(145, 7);
+		sub2.position(145, 33);
+		add1.position(270, 7);
+		add2.position(270, 33);
+
+		sub1.addClass('leaveAlone').mousePressed(p.sub1Fu).style('font-size', '10px').style('padding', '2px 8px');
+		sub2.addClass('leaveAlone').mousePressed(p.sub2Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add1.addClass('leaveAlone').mousePressed(p.add1Fu).style('font-size', '10px').style('padding', '2px 8px');
+		add2.addClass('leaveAlone').mousePressed(p.add2Fu).style('font-size', '10px').style('padding', '2px 8px');
+	};
+
+	// functions for the precision buttons
+	p.sub1Fu = function() {
+		if (deltaDeg.value() > - 90) {
+			document.getElementById("val1").value = deltaDeg.value() - 1;
+		}
+	};
+	p.sub2Fu = function() {
+		if (latiDeg.value() > - 90) {
+			document.getElementById("val2").value = latiDeg.value() - 1;
+		}
+	};
+	p.add1Fu = function() {
+		if (deltaDeg.value() < 90) {
+			document.getElementById("val1").value = deltaDeg.value() + 1;
+		}
+	};
+	p.add2Fu = function() {
+		if (latiDeg.value() < 90) {
+			document.getElementById("val2").value = latiDeg.value() + 1;
+		}
 	};
 
 	// the ground for general situations
