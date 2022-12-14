@@ -21,7 +21,7 @@ let Horizon = function(p) {
 	let img1a, img1b, img2, shade, latar;
 	let LatoReg, LatoBold;
 	let i, pathList, pathListEqu, az, alt, bujur, namaBulan, outputAltAz;
-  let sub3, sub4, sub5, sub6, sub7, sub8, sub9, sub9, sub10, sub11;
+  let sub3, sub4, sub5, sub6, sub7, sub8, sub9, sub10, sub11;
   let add3, add4, add5, add6, add7, add8, add9, add10, add11;
 
 	p.setup = function() {
