@@ -11,7 +11,8 @@ You should have received a copy of the GNU General Public License along with Sim
 figure {
     border: 1px solid #000;
     border-radius: 5px;
-    padding: 7px
+    padding: 7px;
+		width: 100%;
 }
 
 canvas {
