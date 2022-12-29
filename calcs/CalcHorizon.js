@@ -42,7 +42,6 @@ let Horizon = function(p) {
 		d = p.createSlider(1, 31, 20, 1);
 		h = p.createSlider(0, 23, 16, 1);
 		mi = p.createSlider(0, 59, 37, 1);
-		s = p.createSlider(0, 59, 0, 1);
 
 		// the position of the sliders
 		lat.position(201, 1 * pad).id('val3');
@@ -53,7 +52,6 @@ let Horizon = function(p) {
 		d.position(201, 6 * pad + 5 * elHeight).id('val8');
 		h.position(201, 9 * pad + 6 * elHeight + (lebarCanvas - 7 * pad) + pad + 2 * elHeight).id('val9');
 		mi.position(201, 10 * pad + 7 * elHeight + (lebarCanvas - 7 * pad) + pad + 2 * elHeight).id('val10');
-		s.position(201, 11 * pad + 8 * elHeight + (lebarCanvas - 7 * pad) + pad + 2 * elHeight).id('val11');
 
 		// the size of the sliders
 		lat.size(80, elHeight);
@@ -64,7 +62,6 @@ let Horizon = function(p) {
 		d.size(80, elHeight);
 		h.size(80, elHeight);
 		mi.size(80, elHeight);
-		s.size(80, elHeight);
 
 		// buttons for better precision
 		sub3 = p.createButton('--');
@@ -75,7 +72,6 @@ let Horizon = function(p) {
 		sub8 = p.createButton('--');
 		sub9 = p.createButton('--');
 		sub10 = p.createButton('--');
-		sub11 = p.createButton('--');
 		add3 = p.createButton('+');
 		add4 = p.createButton('+');
 		add5 = p.createButton('+');
@@ -84,7 +80,6 @@ let Horizon = function(p) {
 		add8 = p.createButton('+');
 		add9 = p.createButton('+');
 		add10 = p.createButton('+');
-		add11 = p.createButton('+');
 
 		sub3.position(172, 9);
 		sub4.position(172, 35);
@@ -94,7 +89,6 @@ let Horizon = function(p) {
 		sub8.position(172, 139);
 		sub9.position(172, 470);
 		sub10.position(172, 496);
-		sub11.position(172, 522);
 		add3.position(281, 9);
 		add4.position(281, 35);
 		add5.position(281, 61);
@@ -103,7 +97,6 @@ let Horizon = function(p) {
 		add8.position(281, 139);
 		add9.position(281, 470);
 		add10.position(281, 496);
-		add11.position(281, 522);
 
 		sub3.addClass('leaveAlone').mousePressed(p.sub3Fu).style('font-size', '10px').style('padding', '2px 8px');
 		sub4.addClass('leaveAlone').mousePressed(p.sub4Fu).style('font-size', '10px').style('padding', '2px 8px');
@@ -113,7 +106,6 @@ let Horizon = function(p) {
 		sub8.addClass('leaveAlone').mousePressed(p.sub8Fu).style('font-size', '10px').style('padding', '2px 8px');
 		sub9.addClass('leaveAlone').mousePressed(p.sub9Fu).style('font-size', '10px').style('padding', '2px 8px');
 		sub10.addClass('leaveAlone').mousePressed(p.sub10Fu).style('font-size', '10px').style('padding', '2px 8px');
-		sub11.addClass('leaveAlone').mousePressed(p.sub11Fu).style('font-size', '10px').style('padding', '2px 8px');
 		add3.addClass('leaveAlone').mousePressed(p.add3Fu).style('font-size', '10px').style('padding', '2px 8px');
 		add4.addClass('leaveAlone').mousePressed(p.add4Fu).style('font-size', '10px').style('padding', '2px 8px');
 		add5.addClass('leaveAlone').mousePressed(p.add5Fu).style('font-size', '10px').style('padding', '2px 8px');
@@ -122,7 +114,6 @@ let Horizon = function(p) {
 		add8.addClass('leaveAlone').mousePressed(p.add8Fu).style('font-size', '10px').style('padding', '2px 8px');
 		add9.addClass('leaveAlone').mousePressed(p.add9Fu).style('font-size', '10px').style('padding', '2px 8px');
 		add10.addClass('leaveAlone').mousePressed(p.add10Fu).style('font-size', '10px').style('padding', '2px 8px');
-		add11.addClass('leaveAlone').mousePressed(p.add11Fu).style('font-size', '10px').style('padding', '2px 8px');
 	};
 
 	// functions to add or subtract with buttons
@@ -166,11 +157,6 @@ let Horizon = function(p) {
 			document.getElementById("val10").value = mi.value() - 1;
 		}
 	};
-	p.sub11Fu = function() {
-		if (s.value() > 0) {
-			document.getElementById("val11").value = s.value() - 1;
-		}
-	};
 	p.add3Fu = function() {
 		if (lat.value() < 90) {
 			document.getElementById("val3").value = lat.value() + 1;
@@ -209,11 +195,6 @@ let Horizon = function(p) {
 	p.add10Fu = function() {
 		if (mi.value() < 59) {
 			document.getElementById("val10").value = mi.value() + 1;
-		}
-	};
-	p.add11Fu = function() {
-		if (s.value() < 59) {
-			document.getElementById("val11").value = s.value() + 1;
 		}
 	};
 
@@ -477,7 +458,7 @@ let Horizon = function(p) {
 		// calculating the Julian day for the date and location
 		// the algorithm is based on Meeus
 		y = 2021;
-		da = d.value() + h.value() / 24 + mi.value() / 1440 + s.value() / 86400;
+		da = d.value() + h.value() / 24 + mi.value() / 1440;
 		if (m.value() <= 2) {
 			y = y - 1;
 			mo = m.value() + 12;
@@ -663,7 +644,6 @@ let Horizon = function(p) {
 		// reduce the load of focus experienced by users
 		p.text('jam', pad, 9 * pad + 6 * elHeight + (lebarCanvas - 7 * pad) + pad + 2 * elHeight, 150, elHeight);
 		p.text('menit', pad, 10 * pad + 7 * elHeight + (lebarCanvas - 7 * pad) + pad + 2 * elHeight, 150, elHeight);
-		p.text('detik', pad, 11 * pad + 8 * elHeight + (lebarCanvas - 7 * pad) + pad + 2 * elHeight, 150, elHeight);
 
 		// naming the months
 		switch (m.value()) {
@@ -713,7 +693,6 @@ let Horizon = function(p) {
 		p.text(': ' + d.value(), 80, 6 * pad + 5 * elHeight, 150, elHeight);
 		p.text(': ' + h.value(), 80, 9 * pad + 6 * elHeight + (lebarCanvas - 7 * pad) + pad + 2 * elHeight, 150, elHeight);
 		p.text(': ' + mi.value(), 80, 10 * pad + 7 * elHeight + (lebarCanvas - 7 * pad) + pad + 2 * elHeight, 150, elHeight);
-		p.text(': ' + s.value(), 80, 11 * pad + 8 * elHeight + (lebarCanvas - 7 * pad) + pad + 2 * elHeight, 150, elHeight);
 
 		// setting the content of direction markers in the images
 		let arahKiri = 'U';
@@ -779,7 +758,7 @@ let Horizon = function(p) {
 		p.text(
 			'lokasi: lintang ' + lat.value() + '°' + ', bujur ' + bujur + '°' + '\n' +
 			'objek: asensiorekta ' + alph.value() + 'h' + ', deklinasi ' + delt.value() + '°' + '\n' +
-			d.value() + ' ' + namaBulan + ' ' + ' pukul ' + leadZero(h.value(), 2) + ':' + leadZero(mi.value(), 2) + ':' + leadZero(s.value(), 2),
+			d.value() + ' ' + namaBulan + ' ' + ' pukul ' + leadZero(h.value(), 2) + ':' + leadZero(mi.value(), 2),
 			pad,
 			2 * lebarCanvas + 9 * elHeight - pad + pad + 2 * elHeight,
 			lebarCanvas - 2 * pad,

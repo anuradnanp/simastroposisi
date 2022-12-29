@@ -8,6 +8,12 @@ SimAstroPosisi is distributed in the hope that it will be useful, but WITHOUT AN
 
 You should have received a copy of the GNU General Public License along with SimAstroPosisi. If not, see <https://www.gnu.org/licenses/>. */
 
+figure {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 7px
+}
+
 canvas {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   display: block;

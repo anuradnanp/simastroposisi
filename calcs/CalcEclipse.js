@@ -357,7 +357,7 @@ let Eclipse = function(p) {
 		p.noFill();
 
 		// tilting the Earth's rotation axis
-		p.rotateZ(Obl * p.PI / 180);
+		p.rotateX(Obl * p.PI / 180);
 
 		// making the axis more transparent for more
 		// more focused view to the Moon so as not to
@@ -384,7 +384,7 @@ let Eclipse = function(p) {
 		p.push();
 		p.stroke('#ff0000');
 		p.noFill();
-		p.rotateZ(Obl * p.PI / 180);
+		p.rotateX(Obl * p.PI / 180);
 		p.rotateX(p.PI / 2);
 		p.circle(0, 0, 39);
 		p.pop();
