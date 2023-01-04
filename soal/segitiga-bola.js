@@ -111,7 +111,7 @@ const questions = [
 
 // 1
   {
-    question: '<p class="kompetensi">&#x2705; mengetahui bentuk dan arah rute terpendek dan kiblat shalat muslim</p><p>Santiago, Chili terletak pada 33,5&deg;LS 70,5&deg;BB.</p><p>Darwin, Australia terletak pada 12,5&deg;LS 131&deg;BT.</p><p>Bentuk rute terpendek dari Darwin ke Santiago yaitu …</p>',
+    question: '<p class="kompetensi">&#x2705; mengetahui rute terpendek antara dua lokasi dan kiblat shalat muslim</p><p>Santiago, Chili terletak pada 33,5&deg;LS 70,5&deg;BB.</p><p>Darwin, Australia terletak pada 12,5&deg;LS 131&deg;BT.</p><p>Bentuk rute terpendek dari Darwin ke Santiago yaitu …</p>',
     answers:
 			[
 			{ text: 'menjorok ke selatan', correct: true },
@@ -123,7 +123,7 @@ const questions = [
 
 // 2
   {
-    question: '<p class="kompetensi">&#x2705; mengetahui bentuk dan arah rute terpendek dan kiblat shalat muslim</p><p>Florida, AS terletak pada 30&deg;LU 82&deg;BB.</p><p>Yogyakarta, Indonesia terletak pada 8&deg;LS 110,5&deg;BT.</p><p>Bentuk rute terpendek dari Florida ke Yogyakarta yaitu …</p>',
+    question: '<p class="kompetensi">&#x2705; mengetahui rute terpendek antara dua lokasi dan kiblat shalat muslim</p><p>Florida, AS terletak pada 30&deg;LU 82&deg;BB.</p><p>Yogyakarta, Indonesia terletak pada 8&deg;LS 110,5&deg;BT.</p><p>Bentuk rute terpendek dari Florida ke Yogyakarta yaitu …</p>',
     answers:
 			[
 			{ text: 'menjorok ke utara', correct: true },
@@ -135,7 +135,7 @@ const questions = [
 
 // 3
   {
-    question: '<p class="kompetensi">&#x2705; mengetahui bentuk dan arah rute terpendek dan kiblat shalat muslim</p><p>Tokyo, Jepang terletak pada 35,5&deg;LU 140&deg;BT.</p><p>Ka\'bah, di Mekah, Arab Saudi, terletak pada 21,5&deg;LU 40&deg;BT.</p><p>Kisaran arah kiblat bagi muslim di Tokyo yaitu …</p>',
+    question: '<p class="kompetensi">&#x2705; mengetahui rute terpendek antara dua lokasi dan kiblat shalat muslim</p><p>Tokyo, Jepang terletak pada 35,5&deg;LU 140&deg;BT.</p><p>Ka&apos;bah, di Mekah, Arab Saudi, terletak pada 21,5&deg;LU 40&deg;BT.</p><p>Kisaran arah kiblat bagi muslim di Tokyo yaitu …</p>',
     answers:
 			[
 			{ text: 'ke barat laut', correct: true },
@@ -147,7 +147,7 @@ const questions = [
 
 // 4
   {
-    question: '<p class="kompetensi">&#x2705; mengetahui bentuk dan arah rute terpendek dan kiblat shalat muslim</p><p>Washington DC, AS, terletak pada 39&deg;LU 77&deg;BB.</p><p>Ka\'bah, di Mekah, Arab Saudi, terletak pada 21,5&deg;LU 40&deg;BT.</p><p>Kisaran arah kiblat bagi muslim di Washington DC yaitu …</p>',
+    question: '<p class="kompetensi">&#x2705; mengetahui rute terpendek antara dua lokasi dan kiblat shalat muslim</p><p>Washington DC, AS, terletak pada 39&deg;LU 77&deg;BB.</p><p>Ka&apos;bah, di Mekah, Arab Saudi, terletak pada 21,5&deg;LU 40&deg;BT.</p><p>Kisaran arah kiblat bagi muslim di Washington DC yaitu …</p>',
     answers:
 			[
 			{ text: 'ke timur laut', correct: true },
@@ -159,7 +159,7 @@ const questions = [
 
 // 5
   {
-    question: '<p class="kompetensi">&#x2705; mengetahui bentuk dan arah rute terpendek dan kiblat shalat muslim</p><p>Johannesburg, Afrika Selatan terletak pada 26&deg;LS 28&deg;BT.</p><p>San Francisco, AS terletak pada 38&deg;LU 122,5&deg;BB.</p><p>Arah awal rute terpendek dari San Francisco ke Johannesburg yaitu …</p>',
+    question: '<p class="kompetensi">&#x2705; mengetahui rute terpendek antara dua lokasi dan kiblat shalat muslim</p><p>Johannesburg, Afrika Selatan terletak pada 26&deg;LS 28&deg;BT.</p><p>San Francisco, AS terletak pada 38&deg;LU 122,5&deg;BB.</p><p>Arah awal rute terpendek dari San Francisco ke Johannesburg yaitu …</p>',
     answers:
 			[
 			{ text: 'ke timur agak ke utara', correct: true },
@@ -171,7 +171,7 @@ const questions = [
 
 // 6
   {
-    question: '<p class="kompetensi">&#x2705; mengetahui bentuk dan arah rute terpendek dan kiblat shalat muslim</p><p>Roma, Italia terletak pada 42&deg;LU 12,5&deg;BT.</p><p>Honolulu, AS terletak pada 21,5&deg;LU 158&deg;BB.</p><p>Arah awal rute terpendek dari Honolulu ke Roma yaitu …</p>',
+    question: '<p class="kompetensi">&#x2705; mengetahui rute terpendek antara dua lokasi dan kiblat shalat muslim</p><p>Roma, Italia terletak pada 42&deg;LU 12,5&deg;BT.</p><p>Honolulu, AS terletak pada 21,5&deg;LU 158&deg;BB.</p><p>Arah awal rute terpendek dari Honolulu ke Roma yaitu …</p>',
     answers:
 			[
 			{ text: 'ke utara agak ke timur', correct: true },
