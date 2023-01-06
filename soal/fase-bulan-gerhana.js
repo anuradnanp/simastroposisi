@@ -159,13 +159,13 @@ const questions = [
 
 // 5
   {
-    question: '<p class="kompetensi">&#x2705; mengetahui urutan dan kisaran durasi fase Bulan</p><p>Durasi dari Bulan kuartal awal ke purnama hampir sama dengan …</p>',
+    question: '<p class="kompetensi">&#x2705; mengetahui urutan dan kisaran durasi fase Bulan</p><p>Durasi dari Bulan kuartal pertama ke purnama hampir sama dengan …</p>',
     answers:
 			[
-			{ text: 'dari Bulan cembung awal ke cembung akhir', correct: true },
-			{ text: 'dari Bulan sabit awal ke sabit akhir', correct: false },
+			{ text: 'dari Bulan cembung membesar ke cembung mengecil', correct: true },
+			{ text: 'dari Bulan sabit membesar ke sabit mengecil', correct: false },
 			{ text: 'dari Bulan baru ke purnama', correct: false },
-			{ text: 'dari Bulan purnama ke sabit akhir', correct: false }
+			{ text: 'dari Bulan purnama ke sabit mengecil', correct: false }
 			]
   },
 
@@ -174,10 +174,10 @@ const questions = [
     question: '<p class="kompetensi">&#x2705; mengetahui urutan dan kisaran durasi fase Bulan</p><p>Durasi dari Bulan purnama ke baru hampir sama dengan …</p>',
     answers:
 			[
-			{ text: 'dari Bulan sabit awal ke cembung akhir', correct: true },
-			{ text: 'dari Bulan sabit awal ke cembung awal', correct: false },
-			{ text: 'dari Bulan baru ke kuartal akhir', correct: false },
-			{ text: 'dari Bulan purnama ke cembung awal', correct: false }
+			{ text: 'dari Bulan sabit membesar ke cembung mengecil', correct: true },
+			{ text: 'dari Bulan sabit membesar ke cembung membesar', correct: false },
+			{ text: 'dari Bulan baru ke kuartal ketiga', correct: false },
+			{ text: 'dari Bulan purnama ke cembung membesar', correct: false }
 			]
   },
 
@@ -258,9 +258,9 @@ const questions = [
     question: '<p class="kompetensi">&#x2705; mengetahui fase Bulan untuk tanggal tertentu</p><p>Pada 22 April 2022, terjadi fase Bulan …</p>',
     answers:
 			[
-			{ text: 'cembung akhir', correct: true },
-			{ text: 'sabit awal', correct: false },
-			{ text: 'kuartal akhir', correct: false },
+			{ text: 'cembung mengecil', correct: true },
+			{ text: 'sabit membesar', correct: false },
+			{ text: 'kuartal ketiga', correct: false },
 			{ text: 'purnama', correct: false }
 			]
   },
@@ -270,10 +270,10 @@ const questions = [
     question: '<p class="kompetensi">&#x2705; mengetahui fase Bulan untuk tanggal tertentu</p><p>Pada 1 Oktober 2021, terjadi fase Bulan …</p>',
     answers:
 			[
-			{ text: 'sabit akhir', correct: true },
-			{ text: 'sabit awal', correct: false },
-			{ text: 'cembung awal', correct: false },
-			{ text: 'cembung akhir', correct: false }
+			{ text: 'sabit mengecil', correct: true },
+			{ text: 'sabit membesar', correct: false },
+			{ text: 'cembung membesar', correct: false },
+			{ text: 'cembung mengecil', correct: false }
 			]
   },
 
@@ -282,8 +282,8 @@ const questions = [
     question: '<p class="kompetensi">&#x2705; mengetahui fase Bulan untuk tanggal tertentu</p><p>Pada 13 Oktober 2021, terjadi fase Bulan …</p>',
     answers:
 			[
-			{ text: 'kuartal awal', correct: true },
-			{ text: 'kuartal akhir', correct: false },
+			{ text: 'kuartal pertama', correct: true },
+			{ text: 'kuartal ketiga', correct: false },
 			{ text: 'purnama', correct: false },
 			{ text: 'baru', correct: false }
 			]
@@ -294,10 +294,10 @@ const questions = [
     question: '<p class="kompetensi">&#x2705; mengetahui fase Bulan untuk tanggal tertentu</p><p>Pada 24 Mei 2023, terjadi fase Bulan …</p>',
     answers:
 			[
-			{ text: 'sabit awal', correct: true },
-			{ text: 'kuartal akhir', correct: false },
-			{ text: 'sabit akhir', correct: false },
-			{ text: 'kuartal awal', correct: false }
+			{ text: 'sabit membesar', correct: true },
+			{ text: 'kuartal ketiga', correct: false },
+			{ text: 'sabit mengecil', correct: false },
+			{ text: 'kuartal pertama', correct: false }
 			]
   },
 
@@ -411,7 +411,7 @@ const questions = [
 
 // 26
   {
-    question: '<p class="kompetensi">&#x2705; mengetahui kisaran periode peristiwa seputar fase Bulan dan gerhana</p><p>Fase Bulan kuartal awal ke kuartal awal berikutnya berselang …</p>',
+    question: '<p class="kompetensi">&#x2705; mengetahui kisaran periode peristiwa seputar fase Bulan dan gerhana</p><p>Fase Bulan kuartal pertama ke kuartal pertama berikutnya berselang …</p>',
     answers:
 			[
 			{ text: 'sekitar 29 hari', correct: true },
